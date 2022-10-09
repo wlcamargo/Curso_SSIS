@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Aula 4 - Realizando ETL XLXS - BD"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{9599A9D3-6118-4DC7-AF42-07DA463CA8EB}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{BD3E377C-ADCF-4ABE-8EFE-E8CC89C54266}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -256,7 +256,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Produto_id]</property>
+                  name="OpenRowset">[dbo].[PRD_ESCOLA]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -311,20 +311,12 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\PRD_ESCOLA.Inputs[OLE DB Destination Input].Columns[product_id]"
-                      cachedDataType="r8"
-                      cachedName="product_id"
-                      externalMetadataColumnId="Package\Data Flow Task\PRD_ESCOLA.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Data Flow Task\Marketting.Outputs[Excel Source Output].Columns[product_id]" />
-                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\PRD_ESCOLA.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      dataType="i4"
-                      name="product_id" />
+                      refId="Package\Data Flow Task\PRD_ESCOLA.Inputs[OLE DB Destination Input].ExternalColumns[wallace]"
+                      dataType="dbDate"
+                      name="wallace" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -396,21 +388,21 @@
         <NodeLayout
           Size="148,41.6"
           Id="Package\Data Flow Task\PRD_ESCOLA"
-          TopLeft="105,193" />
+          TopLeft="96.6666669978036,184.333333264457" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="176.3,92.6">
+          TopLeft="172.133333498902,92.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,100.4"
+              EndConnector="0,91.7333332644568"
               Start="0,0"
-              End="0,92.9">
+              End="0,84.2333332644568">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.9" />
+                    End="0,84.2333332644568" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
