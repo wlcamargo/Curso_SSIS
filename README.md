@@ -11,3 +11,5 @@ Aula 3 - Criando Conectores planilha e SQL Server
 Aula 4 - Criando tabela no SQL Server e importando dados da planilha 
 
 Aula 5 - Loop de Truncate Table
+
+Aula 6 - Dividindo Fluxo de ETL
