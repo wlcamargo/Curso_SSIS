@@ -13,3 +13,7 @@ Aula 4 - Criando tabela no SQL Server e importando dados da planilha
 Aula 5 - Loop de Truncate Table
 
 Aula 6 - Dividindo Fluxo de ETL
+
+Aula 7 - Importando Dados dos Clientes
+
+Aula 8 - Importando Dados das Vendas
