@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-UL4QIO3</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAAAYDeebCF5XLZazHkhcobD5UNZf33NxwCaUT+UFby4SBgAAAAAOgAAAAAIAACAAAACFK6mgxI6vDR0vJyRP2A2o1KbtxkI41LicMRUssJGkBJAAAABWWcuNYf5+eNRsmEbur6fqvG1+lmxcpQYy3RhLJc8khudZgDpdH6W6eKjdr7Hzgy3nj9255n/4GPr5H/INK63gVhUeIFvPTkE/GFPGzyYKjtmJ8gQ5xref0MfHufMPHzkjaEUt5/Q+JpI6sZwOIz60lyd1GPndd1PumdFh9GavktRif4tksVfm2mZ+lzAymb9AAAAAYrStuPFmzZ/mE4lsrMdo53EvViReHstzY2JXG3hRdBx1go7cV54uQK47FciP8MM4joD7tV1tgvvGNzgNGliEkQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAADVsNZrIdZm5+5n+v7jRmv4PaIEwtYd90eWZxOxLrSslgAAAAAOgAAAAAIAACAAAAAIZ+ZG4510EKzEsqU06kdy3Cu7vaHDTKmqeJqEjNoxNpAAAACQHOf9EAKShBiXqgN+GMOR2gK29MkG1wXZiBjDcHF9FvO6fH12j0C+fYk6VA3sxGzt66ZvfkQEm0x1reh+P29rrSGCF9NFBS97eBk24vZwXch/ZeZwC8lyg/mNVztlBxbFbyzY9vj/X1mtwKsBYpM1Skn2eQCFOGSbkQuLhS7iTrd+LPTWVgPC52WO2QMyEllAAAAAhb3UMx+30EpJPOj7SXbhgOLzTZeF0md04VNeWAmA+Sk98nyIgYZOwoE2AZuq2rQj9NVy8/4vikzpuwrdGKHE+g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -34,6 +34,7 @@
           <SSIS:Package SSIS:Name="Aula 1 - Introdução ao Git e Github.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 3 - Criando Conectores.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 4 - Realizando ETL XLSX - BD (Produto).dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Aula 5 - Criando Loop de Truncate.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Planilha Marketing.conmgr" />
@@ -529,10 +530,27 @@
                 <SSIS:Property SSIS:Name="Name">Aula 4 - Realizando ETL XLSX - BD  Produto</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">17</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{52A7F654-D0E8-413D-BEF2-9AB7438467E6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4016C065-4F04-41C6-99CE-A69006F30EFA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Aula 5 - Criando Loop de Truncate.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{0C38A05D-2C27-411E-80BD-DEFE738514C8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Aula 5 - Criando Loop de Truncate</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F3DE47EE-FCCC-4DAF-A15A-5FBF96A49687}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

@@ -1,18 +1,18 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/9/2022 2:27:08 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-UL4QIO3"
   DTS:CreatorName="DESKTOP-UL4QIO3\walla"
-  DTS:DTSID="{C7D3945C-7C88-436D-8AB3-BD56F6C772D5}"
+  DTS:DTSID="{0C38A05D-2C27-411E-80BD-DEFE738514C8}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="2070"
-  DTS:ObjectName="Aula 4 - Realizando ETL XLSX - BD  Produto"
+  DTS:ObjectName="Aula 5 - Criando Loop de Truncate"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{4016C065-4F04-41C6-99CE-A69006F30EFA}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{F3DE47EE-FCCC-4DAF-A15A-5FBF96A49687}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:LogProviders>
@@ -20,7 +20,7 @@
       DTS:ConfigString="localhost.PRD_ESCOLA"
       DTS:CreationName="Microsoft.LogProviderSQLServer"
       DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{630C103F-64B6-4FC1-8D58-476172CCDDA6}"
+      DTS:DTSID="{F693B473-A786-47E6-9D2D-C8909325D8F3}"
       DTS:ObjectName="SSIS log provider for SQL Server2">
       <DTS:ObjectData>
         <InnerObject />
@@ -108,7 +108,7 @@
     </DTS:Property>
     <DTS:SelectedLogProviders>
       <DTS:SelectedLogProvider
-        DTS:InstanceID="{630C103F-64B6-4FC1-8D58-476172CCDDA6}" />
+        DTS:InstanceID="{F693B473-A786-47E6-9D2D-C8909325D8F3}" />
     </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
@@ -116,7 +116,7 @@
       DTS:refId="Package\Fluxo Planilha Marketing - Database"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{4577A29C-F6E5-4697-B3B6-73899B8A5764}"
+      DTS:DTSID="{522BBD5D-96C1-46ED-8C2E-E549DD69CD30}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Fluxo Planilha Marketing - Database"
@@ -1357,7 +1357,7 @@
         <NodeLayout
           Size="245.6,41.6"
           Id="Package\Fluxo Planilha Marketing - Database"
-          TopLeft="252.499989966552,129.133334359593" />
+          TopLeft="232.499990761281,126.53333433893" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

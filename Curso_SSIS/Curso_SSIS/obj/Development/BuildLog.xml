@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Curso_SSIS</Name>
-    <LastWriteTime>2022-10-11T18:13:59.2182372Z</LastWriteTime>
+    <LastWriteTime>2022-10-15T19:16:49.2125188Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -22,13 +22,13 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Aula 4 - Realizando ETL XLXS - BD.dtsx</Name>
-      <LastWriteTime>2022-10-11T18:12:41.6850528Z</LastWriteTime>
+      <Name>Aula 4 - Realizando ETL XLSX - BD (Produto).dtsx</Name>
+      <LastWriteTime>2022-10-15T18:38:25.5839772Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Excel_to_Database.dtsx</Name>
-      <LastWriteTime>2022-10-11T18:13:59.1751517Z</LastWriteTime>
+      <Name>Aula 5 - Criando Loop de Truncate.dtsx</Name>
+      <LastWriteTime>2022-10-15T19:16:49.1975604Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
