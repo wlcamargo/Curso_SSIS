@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.PRD_ESCOLA"
+  DTS:DTSID="{4627DD99-6047-4176-94FA-896F88BC0E04}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=PRD_ESCOLA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Aula 3 - Criando Conectores-{4627DD99-6047-4176-94FA-896F88BC0E04}localhost.PRD_ESCOLA;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

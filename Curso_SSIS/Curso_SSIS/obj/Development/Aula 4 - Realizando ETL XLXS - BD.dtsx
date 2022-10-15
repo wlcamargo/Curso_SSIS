@@ -11,24 +11,10 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Aula 4 - Realizando ETL XLXS - BD"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{5BDC741E-2D5D-4F56-849F-84CED5ECE0DA}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{6770E335-4F99-4B1C-AB6D-600F78D20FEF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.PRD_ESCOLA]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{4627DD99-6047-4176-94FA-896F88BC0E04}"
-      DTS:ObjectName="localhost.PRD_ESCOLA">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=PRD_ESCOLA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Aula 3 - Criando Conectores-{4627DD99-6047-4176-94FA-896F88BC0E04}localhost.PRD_ESCOLA;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:LogProviders>
     <DTS:LogProvider
       DTS:ConfigString="localhost.PRD_ESCOLA"
@@ -299,8 +285,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\PRD_ESCOLA.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.PRD_ESCOLA]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.PRD_ESCOLA]"
+                  connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -380,7 +366,7 @@
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="116.66666203075,65.8666671901279" />
+          TopLeft="194.166658951177,71.9333339050081" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -390,13 +376,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\Data Flow Task\Marketting"
-          TopLeft="110,51" />
-        <NodeLayout
           Size="148,41.6"
           Id="Package\Data Flow Task\PRD_ESCOLA"
           TopLeft="105,193" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Data Flow Task\Marketting"
+          TopLeft="110,51" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
           TopLeft="176.3,92.6">
@@ -420,7 +406,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="Importar para banco de dados 5 tabelas de produto&#xA;  - Produto_id - OK&#xD;&#xA;  - Modelo_produto&#xD;&#xA;  - Marca_produto&#xD;&#xA;  - Ano_produto&#xD;&#xA;  - Preco_produto"
+          Text="Importar para banco de dados 5 tabelas de produto&#xA;  - Produto_id - OK&#xA;  - Modelo_produto&#xA;  - Marca_produto&#xA;  - Ano_produto&#xA;  - Preco_produto"
           ParentId="Package\Data Flow Task"
           FontInfo="{assembly:Null}"
           Size="303.2,120"
