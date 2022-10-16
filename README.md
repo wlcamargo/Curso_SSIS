@@ -23,3 +23,5 @@ Aula 9 - Inclusao Pacote Principal (main)
 Aula 10 - Migração Produção para Staging
 
 Aula 11 - Criação da dProduto no DW (com SCD tipo 2) Histórico na dimensão
+
+Aula 12 - Criação da dCliente no DW (com SCD tipo 2) Histórico na dimensão
