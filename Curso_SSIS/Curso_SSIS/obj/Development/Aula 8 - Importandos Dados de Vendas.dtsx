@@ -1,0 +1,1277 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/16/2022 12:09:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-UL4QIO3"
+  DTS:CreatorName="DESKTOP-UL4QIO3\walla"
+  DTS:DTSID="{669B726B-C125-4C3B-A449-5E456C37BC17}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="2070"
+  DTS:ObjectName="Aula 8 - Importandos Dados de Vendas"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{111C9B80-742F-431F-8125-98F2EB91EA42}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Fluxo de Vendas"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{57F8A769-31E0-4FDC-9B12-6524D3286767}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fluxo de Vendas"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fluxo de Vendas\Data_pagamento"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Data_pagamento"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Data_Pagamento$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\Data_pagamento.Connections[OleDbConnection]"
+                  connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].Columns[Venda_id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].ExternalColumns[Venda_id]"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].Columns[Venda_id]"
+                      name="Venda_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].Columns[paid_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].ExternalColumns[paid_date]"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].Columns[paid_date]"
+                      name="paid_date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].ExternalColumns[Venda_id]"
+                      dataType="r8"
+                      name="Venda_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].ExternalColumns[paid_date]"
+                      dataType="date"
+                      name="paid_date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[Venda_id]"
+                      dataType="r8"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[Venda_id]"
+                      name="Venda_id" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[paid_date]"
+                      dataType="date"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[paid_date]"
+                      name="paid_date" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="PRD_ESCOLA_Data_venda"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Data_venda]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Connections[OleDbConnection]"
+                  connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input].Columns[Venda_id]"
+                      cachedDataType="r8"
+                      cachedName="Venda_id"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input].ExternalColumns[Venda_id]"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].Columns[Venda_id]" />
+                    <inputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input].Columns[paid_date]"
+                      cachedDataType="date"
+                      cachedName="paid_date"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input].ExternalColumns[paid_date]"
+                      lineageId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output].Columns[paid_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input].ExternalColumns[Venda_id]"
+                      dataType="i4"
+                      name="Venda_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input].ExternalColumns[paid_date]"
+                      dataType="dbDate"
+                      name="paid_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="PRD_ESCOLA_Produto_vendido"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Produto_vendido]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Connections[OleDbConnection]"
+                  connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input].Columns[Venda_Id]"
+                      cachedDataType="r8"
+                      cachedName="Venda_Id"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Id]"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].Columns[Venda_Id]" />
+                    <inputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      cachedDataType="r8"
+                      cachedName="product_id"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].Columns[product_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Id]"
+                      dataType="i4"
+                      name="Venda_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      dataType="i4"
+                      name="product_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="PRD_ESCOLA_Quantidade_vendia"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Quantidade_vendida]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Connections[OleDbConnection]"
+                  connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input].Columns[Venda_id]"
+                      cachedDataType="r8"
+                      cachedName="Venda_id"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input].ExternalColumns[Venda_id]"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].Columns[Venda_id]" />
+                    <inputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input].Columns[quantity]"
+                      cachedDataType="r8"
+                      cachedName="quantity"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input].ExternalColumns[quantity]"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].Columns[quantity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input].ExternalColumns[Venda_id]"
+                      dataType="i4"
+                      name="Venda_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="PRD_ESCOLA_Venda_id"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Venda_id]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Connections[OleDbConnection]"
+                  connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Inputs[OLE DB Destination Input].Columns[Venda_Id]"
+                      cachedDataType="r8"
+                      cachedName="Venda_Id"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Id]"
+                      lineageId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Output].Columns[Venda_Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Id]"
+                      dataType="i4"
+                      name="Venda_Id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo de Vendas\Produto_vendido"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Produto_vendido"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Produto_vendido$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\Produto_vendido.Connections[OleDbConnection]"
+                  connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].Columns[Venda_Id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].ExternalColumns[Venda_Id]"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].Columns[Venda_Id]"
+                      name="Venda_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].Columns[product_id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].Columns[product_id]"
+                      name="product_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].ExternalColumns[Venda_Id]"
+                      dataType="r8"
+                      name="Venda_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      dataType="r8"
+                      name="product_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[Venda_Id]"
+                      dataType="r8"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[Venda_Id]"
+                      name="Venda_Id" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[product_id]"
+                      dataType="r8"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[product_id]"
+                      name="product_id" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo de Vendas\Quantidade_vendida"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Quantidade_vendida"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Quantidade_Vendida$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\Quantidade_vendida.Connections[OleDbConnection]"
+                  connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].Columns[Venda_id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].ExternalColumns[Venda_id]"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].Columns[Venda_id]"
+                      name="Venda_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].Columns[quantity]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].ExternalColumns[quantity]"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].Columns[quantity]"
+                      name="quantity"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].ExternalColumns[Venda_id]"
+                      dataType="r8"
+                      name="Venda_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output].ExternalColumns[quantity]"
+                      dataType="r8"
+                      name="quantity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[Venda_id]"
+                      dataType="r8"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[Venda_id]"
+                      name="Venda_id" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[quantity]"
+                      dataType="r8"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[quantity]"
+                      name="quantity" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo de Vendas\Venda_id"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Venda_id"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Venda_Id$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo de Vendas\Venda_id.Connections[OleDbConnection]"
+                  connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Output].Columns[Venda_Id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Output].ExternalColumns[Venda_Id]"
+                      lineageId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Output].Columns[Venda_Id]"
+                      name="Venda_Id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Output].ExternalColumns[Venda_Id]"
+                      dataType="r8"
+                      name="Venda_Id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Error Output].Columns[Venda_Id]"
+                      dataType="r8"
+                      lineageId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Error Output].Columns[Venda_Id]"
+                      name="Venda_Id" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fluxo de Vendas.Paths[Excel Source Output]"
+              endId="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Fluxo de Vendas\Venda_id.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Fluxo de Vendas.Paths[Excel Source Output1]"
+              endId="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Fluxo de Vendas\Produto_vendido.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Fluxo de Vendas.Paths[Excel Source Output2]"
+              endId="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Fluxo de Vendas\Data_pagamento.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Fluxo de Vendas.Paths[Excel Source Output3]"
+              endId="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Fluxo de Vendas\Quantidade_vendida.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Fluxo de Vendas"
+          TopLeft="114.999995430311,78.0000006198883" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Fluxo de Vendas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="122.4,41.6"
+          Id="Package\Fluxo de Vendas\Venda_id"
+          TopLeft="46.6666648123001,53.7333337603675" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Fluxo de Vendas\Produto_vendido"
+          TopLeft="276.166664116913,55.4666671074762" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Fluxo de Vendas\Data_pagamento"
+          TopLeft="550.666661633386,58.9333338016935" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Fluxo de Vendas\Quantidade_vendida"
+          TopLeft="758.499995132288,54.6000004339219" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id"
+          TopLeft="10.8333329028554,208.000001653036" />
+        <NodeLayout
+          Size="232.8,41.6"
+          Id="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido"
+          TopLeft="274.166655772263,218.600000929833" />
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda"
+          TopLeft="542.499978442988,225.200000123978" />
+        <NodeLayout
+          Size="244,41.6"
+          Id="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia"
+          TopLeft="771.66663600339,225.933332706557" />
+        <EdgeLayout
+          Id="Package\Fluxo de Vendas.Paths[Excel Source Output]"
+          TopLeft="108.749998857578,95.3333337603675">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,112.666667892668"
+              Start="0,0"
+              End="0,105.166667892668">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,105.166667892668" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fluxo de Vendas.Paths[Excel Source Output1]"
+          TopLeft="354.566664116913,97.0666671074762">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.99999165535,121.533333822356"
+              Start="0,0"
+              End="35.99999165535,114.033333822356">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.7666669111782" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.7666669111782"
+                    Point2="0,60.7666669111782"
+                    Point3="4,60.7666669111782" />
+                  <mssgle:LineSegment
+                    End="31.99999165535,60.7666669111782" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.99999165535,60.7666669111782"
+                    Point2="35.99999165535,60.7666669111782"
+                    Point3="35.99999165535,64.7666669111782" />
+                  <mssgle:LineSegment
+                    End="35.99999165535,114.033333822356" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fluxo de Vendas.Paths[Excel Source Output2]"
+          TopLeft="629.866661633386,100.533333801693">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.8333168096019,124.666666322284"
+              Start="0,0"
+              End="17.8333168096019,117.166666322284">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.3333331611422" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,58.3333331611422"
+                    Point2="0,62.3333331611422"
+                    Point3="4,62.3333331611422" />
+                  <mssgle:LineSegment
+                    End="13.8333168096019,62.3333331611422" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.8333168096019,62.3333331611422"
+                    Point2="17.8333168096019,62.3333331611422"
+                    Point3="17.8333168096019,66.3333331611422" />
+                  <mssgle:LineSegment
+                    End="17.8333168096019,117.166666322284" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fluxo de Vendas.Paths[Excel Source Output3]"
+          TopLeft="845.699995132288,96.2000004339219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.9666408711018,129.733332272636"
+              Start="0,0"
+              End="47.9666408711018,122.233332272636">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.8666661363178" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.8666661363178"
+                    Point2="0,64.8666661363178"
+                    Point3="4,64.8666661363178" />
+                  <mssgle:LineSegment
+                    End="43.9666408711018,64.8666661363178" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.9666408711018,64.8666661363178"
+                    Point2="47.9666408711018,64.8666661363178"
+                    Point3="47.9666408711018,68.8666661363178" />
+                  <mssgle:LineSegment
+                    End="47.9666408711018,122.233332272636" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\Venda_id">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\Produto_vendido">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\Data_pagamento">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\Quantidade_vendida">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\PRD_ESCOLA_Venda_id">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\PRD_ESCOLA_Produto_vendido">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\PRD_ESCOLA_Data_venda">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo de Vendas\PRD_ESCOLA_Quantidade_vendia">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
