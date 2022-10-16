@@ -16,3 +16,5 @@ Aula 6 - Dividindo Fluxo de ETL
 
 Aula 7 - Importando Dados dos Clientes
 
+Aula 8 - Importando Dados de Vendas
+
