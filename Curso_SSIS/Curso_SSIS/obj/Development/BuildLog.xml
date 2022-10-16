@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Curso_SSIS</Name>
-    <LastWriteTime>2022-10-16T15:18:03.7186217Z</LastWriteTime>
+    <LastWriteTime>2022-10-16T15:50:24.7557915Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -28,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 5 - Criando Loop de Truncate.dtsx</Name>
-      <LastWriteTime>2022-10-15T20:01:29.700789Z</LastWriteTime>
+      <LastWriteTime>2022-10-16T15:26:29.1807085Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -38,12 +38,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 7 - Importando Dados do Cliente.dtsx</Name>
-      <LastWriteTime>2022-10-15T21:06:43.2263201Z</LastWriteTime>
+      <LastWriteTime>2022-10-16T15:34:22.7262465Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 8 - Importandos Dados de Vendas.dtsx</Name>
       <LastWriteTime>2022-10-16T15:19:09.1214334Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Aula 9 - Criando Pacote Main (Principal).dtsx</Name>
+      <LastWriteTime>2022-10-16T15:41:42.0983349Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

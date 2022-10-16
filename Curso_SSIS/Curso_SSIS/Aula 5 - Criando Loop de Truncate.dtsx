@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Aula 5 - Criando Loop de Truncate"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{2BD125B6-87D1-4209-9121-4E5415EDD7E5}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{F1A64713-6A81-4032-B18D-034E8E00B183}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:LogProviders>
@@ -113,13 +113,13 @@
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Fluxo Planilha Marketing - Database"
+      DTS:refId="Package\Fluxo Produto"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{522BBD5D-96C1-46ED-8C2E-E549DD69CD30}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Fluxo Planilha Marketing - Database"
+      DTS:ObjectName="Fluxo Produto"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:LoggingOptions
@@ -129,7 +129,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\Ano_produto"
+              refId="Package\Fluxo Produto\Ano_produto"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -170,7 +170,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\Ano_produto.Connections[OleDbConnection]"
                   connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
                   description="The OLE DB runtime connection used to access the database."
@@ -178,68 +178,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output]"
+                  refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].Columns[product_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].Columns[model_year]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].Columns[model_year]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].ExternalColumns[model_year]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].ExternalColumns[model_year]"
                       length="255"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].Columns[model_year]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].Columns[model_year]"
                       name="model_year"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
                       dataType="r8"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].ExternalColumns[model_year]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].ExternalColumns[model_year]"
                       dataType="wstr"
                       length="255"
                       name="model_year" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output]"
+                  refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       dataType="r8"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[model_year]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[model_year]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[model_year]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[model_year]"
                       name="model_year" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -248,7 +248,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\Marca_produto"
+              refId="Package\Fluxo Produto\Marca_produto"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -289,7 +289,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\Marca_produto.Connections[OleDbConnection]"
                   connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
                   description="The OLE DB runtime connection used to access the database."
@@ -297,68 +297,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output]"
+                  refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].Columns[product_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].Columns[brand]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].Columns[brand]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].ExternalColumns[brand]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].ExternalColumns[brand]"
                       length="255"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].Columns[brand]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].Columns[brand]"
                       name="brand"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
                       dataType="r8"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].ExternalColumns[brand]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].ExternalColumns[brand]"
                       dataType="wstr"
                       length="255"
                       name="brand" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output]"
+                  refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       dataType="r8"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[brand]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[brand]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[brand]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[brand]"
                       name="brand" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -367,7 +367,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto"
+              refId="Package\Fluxo Produto\Modelo_produto"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -408,7 +408,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\Modelo_produto.Connections[OleDbConnection]"
                   connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
                   description="The OLE DB runtime connection used to access the database."
@@ -416,68 +416,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output]"
+                  refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].Columns[product_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].Columns[model]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].Columns[model]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[model]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[model]"
                       length="255"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].Columns[model]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].Columns[model]"
                       name="model"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
                       dataType="r8"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[model]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].ExternalColumns[model]"
                       dataType="wstr"
                       length="255"
                       name="model" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output]"
+                  refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       dataType="r8"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[model]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[model]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[model]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[model]"
                       name="model" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -486,7 +486,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto"
+              refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -543,7 +543,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Connections[OleDbConnection]"
                   connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
                   description="The OLE DB runtime connection used to access the database."
@@ -551,34 +551,34 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
                       cachedDataType="r8"
                       cachedName="product_id"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].Columns[product_id]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].Columns[product_id]" />
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].Columns[model_year]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].Columns[model_year]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="model_year"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[model_year]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output].Columns[model_year]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[model_year]"
+                      lineageId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output].Columns[model_year]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[model_year]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input].ExternalColumns[model_year]"
                       dataType="wstr"
                       length="4"
                       name="model_year" />
@@ -587,22 +587,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -611,7 +611,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto"
+              refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -668,7 +668,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Connections[OleDbConnection]"
                   connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
                   description="The OLE DB runtime connection used to access the database."
@@ -676,34 +676,34 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
                       cachedDataType="r8"
                       cachedName="product_id"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].Columns[product_id]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].Columns[product_id]" />
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].Columns[brand]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].Columns[brand]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="brand"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[brand]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output].Columns[brand]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[brand]"
+                      lineageId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output].Columns[brand]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[brand]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input].ExternalColumns[brand]"
                       dataType="wstr"
                       length="255"
                       name="brand" />
@@ -712,22 +712,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -736,7 +736,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto"
+              refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -793,7 +793,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Connections[OleDbConnection]"
                   connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
                   description="The OLE DB runtime connection used to access the database."
@@ -801,34 +801,34 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
                       cachedDataType="r8"
                       cachedName="product_id"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].Columns[product_id]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].Columns[product_id]" />
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].Columns[model]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].Columns[model]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="model"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[model]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output].Columns[model]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[model]"
+                      lineageId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output].Columns[model]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[model]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input].ExternalColumns[model]"
                       dataType="wstr"
                       length="255"
                       name="model" />
@@ -837,22 +837,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -861,7 +861,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto"
+              refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -918,7 +918,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Connections[OleDbConnection]"
                   connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
                   description="The OLE DB runtime connection used to access the database."
@@ -926,33 +926,33 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].Columns[product_id]"
                       cachedDataType="r8"
                       cachedName="product_id"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].Columns[product_id]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].Columns[product_id]" />
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].Columns[price]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].Columns[price]"
                       cachedDataType="r8"
                       cachedName="price"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[price]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].Columns[price]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].Columns[price]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[price]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input].ExternalColumns[price]"
                       dataType="cy"
                       name="price" />
                   </externalMetadataColumns>
@@ -960,22 +960,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -984,7 +984,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id"
+              refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -1041,7 +1041,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Connections[OleDbConnection]"
                   connectionManagerID="{4627DD99-6047-4176-94FA-896F88BC0E04}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.PRD_ESCOLA]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1049,23 +1049,23 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input].Columns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input].Columns[product_id]"
                       cachedDataType="r8"
                       cachedName="product_id"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Output].Columns[product_id]" />
+                      externalMetadataColumnId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Output].Columns[product_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                   </externalMetadataColumns>
@@ -1073,22 +1073,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1097,7 +1097,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\Preco_produto"
+              refId="Package\Fluxo Produto\Preco_produto"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -1138,7 +1138,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\Preco_produto.Connections[OleDbConnection]"
                   connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1146,65 +1146,65 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output]"
+                  refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].Columns[product_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].Columns[price]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].Columns[price]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].ExternalColumns[price]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].Columns[price]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].ExternalColumns[price]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].Columns[price]"
                       name="price"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].ExternalColumns[product_id]"
                       dataType="r8"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output].ExternalColumns[price]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output].ExternalColumns[price]"
                       dataType="r8"
                       name="price" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output]"
+                  refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       dataType="r8"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[product_id]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[price]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[price]"
                       dataType="r8"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[price]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[price]"
                       name="price" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1213,7 +1213,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo Planilha Marketing - Database\Produto_id"
+              refId="Package\Fluxo Produto\Produto_id"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -1254,7 +1254,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Connections[OleDbConnection]"
+                  refId="Package\Fluxo Produto\Produto_id.Connections[OleDbConnection]"
                   connectionManagerID="{68C78C10-B154-4554-9576-441F26C0404D}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Planilha Marketing]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1262,47 +1262,47 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Output]"
+                  refId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Output].Columns[product_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Output].ExternalColumns[product_id]"
+                      refId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Output].ExternalColumns[product_id]"
                       dataType="r8"
                       name="product_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Error Output]"
+                  refId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Error Output].Columns[product_id]"
+                      refId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Error Output].Columns[product_id]"
                       dataType="r8"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Error Output].Columns[product_id]"
+                      lineageId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1313,30 +1313,30 @@
           </components>
           <paths>
             <path
-              refId="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output]"
-              endId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input]"
+              refId="Package\Fluxo Produto.Paths[Excel Source Output]"
+              endId="Package\Fluxo Produto\PRD_ESCOLA_Produto_id.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Fluxo Planilha Marketing - Database\Produto_id.Outputs[Excel Source Output]" />
+              startId="Package\Fluxo Produto\Produto_id.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output1]"
-              endId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input]"
+              refId="Package\Fluxo Produto.Paths[Excel Source Output1]"
+              endId="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Fluxo Planilha Marketing - Database\Modelo_produto.Outputs[Excel Source Output]" />
+              startId="Package\Fluxo Produto\Modelo_produto.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output2]"
-              endId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input]"
+              refId="Package\Fluxo Produto.Paths[Excel Source Output2]"
+              endId="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Fluxo Planilha Marketing - Database\Marca_produto.Outputs[Excel Source Output]" />
+              startId="Package\Fluxo Produto\Marca_produto.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output3]"
-              endId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input]"
+              refId="Package\Fluxo Produto.Paths[Excel Source Output3]"
+              endId="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Fluxo Planilha Marketing - Database\Ano_produto.Outputs[Excel Source Output]" />
+              startId="Package\Fluxo Produto\Ano_produto.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output4]"
-              endId="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input]"
+              refId="Package\Fluxo Produto.Paths[Excel Source Output4]"
+              endId="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Fluxo Planilha Marketing - Database\Preco_produto.Outputs[Excel Source Output]" />
+              startId="Package\Fluxo Produto\Preco_produto.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1366,7 +1366,7 @@
       DTS:From="Package\Limpar Tabelas"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Fluxo Planilha Marketing - Database" />
+      DTS:To="Package\Fluxo Produto" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1381,27 +1381,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="245.6,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database"
-          TopLeft="188.333325849639,216.666668388579" />
+          Size="143.2,41.6"
+          Id="Package\Fluxo Produto"
+          TopLeft="241.666657063696,240.9333352481" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Limpar Tabelas"
           TopLeft="233.3333240615,56.3333337810305" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="309.83332495557,97.9333337810305">
+          TopLeft="310.899990562598,97.9333337810305">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,118.733334607548"
+              EndConnector="0,143.000001467069"
               Start="0,0"
-              End="0,111.233334607548">
+              End="0,135.500001467069">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,111.233334607548" />
+                    End="0,135.500001467069" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1414,52 +1414,52 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Fluxo Planilha Marketing - Database">
+    design-time-name="Package\Fluxo Produto">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="228.8,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto"
+          Id="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto"
           TopLeft="546.666644944086,176.80000140508" />
         <NodeLayout
           Size="224,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto"
+          Id="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto"
           TopLeft="808.333301213054,178.533334752189" />
         <NodeLayout
           Size="128.8,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\Produto_id"
+          Id="Package\Fluxo Produto\Produto_id"
           TopLeft="338.333324260182,24.9999997933705" />
         <NodeLayout
           Size="146.4,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\Preco_produto"
+          Id="Package\Fluxo Produto\Preco_produto"
           TopLeft="1349.6999593695,23.3333330991533" />
         <NodeLayout
           Size="213.6,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto"
+          Id="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto"
           TopLeft="1063.86663739416,180.266668099298" />
         <NodeLayout
           Size="204,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id"
+          Id="Package\Fluxo Produto\PRD_ESCOLA_Produto_id"
           TopLeft="301.666658851836,173.933333181805" />
         <NodeLayout
           Size="153.6,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\Modelo_produto"
+          Id="Package\Fluxo Produto\Modelo_produto"
           TopLeft="579.166643652652,19.9333334917493" />
         <NodeLayout
           Size="148,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\Marca_produto"
+          Id="Package\Fluxo Produto\Marca_produto"
           TopLeft="840.933303001193,19.9333334917492" />
         <NodeLayout
           Size="222.4,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto"
+          Id="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto"
           TopLeft="1316.36662736072,181.86666776869" />
         <NodeLayout
           Size="137.6,41.6"
-          Id="Package\Fluxo Planilha Marketing - Database\Ano_produto"
+          Id="Package\Fluxo Produto\Ano_produto"
           TopLeft="1096.36663610273,21.6666668388578" />
         <EdgeLayout
-          Id="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output4]"
+          Id="Package\Fluxo Produto.Paths[Excel Source Output4]"
           TopLeft="1425.23329336511,64.9333330991533">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1483,7 +1483,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output3]"
+          Id="Package\Fluxo Produto.Paths[Excel Source Output3]"
           TopLeft="1167.91663674845,63.2666668388578">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1507,7 +1507,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output2]"
+          Id="Package\Fluxo Produto.Paths[Excel Source Output2]"
           TopLeft="917.633302107124,61.5333334917492">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1531,7 +1531,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output1]"
+          Id="Package\Fluxo Produto.Paths[Excel Source Output1]"
           TopLeft="658.516644298369,61.5333334917493">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1555,7 +1555,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fluxo Planilha Marketing - Database.Paths[Excel Source Output]"
+          Id="Package\Fluxo Produto.Paths[Excel Source Output]"
           TopLeft="403.199991556009,66.5999997933705">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1580,7 +1580,7 @@
         </EdgeLayout>
         <AnnotationLayout
           Text="Importar para banco de dados 5 tabelas de produto&#xA;  - Produto_id - OK&#xA;  - Modelo_produto - OK&#xA;  - Marca_produto - OK&#xA;  - Ano_produto - OK&#xA;  - Preco_produto - OK"
-          ParentId="Package\Fluxo Planilha Marketing - Database"
+          ParentId="Package\Fluxo Produto"
           FontInfo="{assembly:Null}"
           Size="303.2,NaN"
           Id="0678507a-4066-4277-8260-e85ebdfa727d"
@@ -1589,7 +1589,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Modelo_produto">
+    design-time-name="Package\Fluxo Produto\PRD_ESCOLA_Modelo_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1602,7 +1602,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Marca_produto">
+    design-time-name="Package\Fluxo Produto\PRD_ESCOLA_Marca_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1615,7 +1615,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\Produto_id">
+    design-time-name="Package\Fluxo Produto\Produto_id">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1628,7 +1628,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\Preco_produto">
+    design-time-name="Package\Fluxo Produto\Preco_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1641,7 +1641,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Ano_produto">
+    design-time-name="Package\Fluxo Produto\PRD_ESCOLA_Ano_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1654,7 +1654,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Produto_id">
+    design-time-name="Package\Fluxo Produto\PRD_ESCOLA_Produto_id">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1667,7 +1667,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\Modelo_produto">
+    design-time-name="Package\Fluxo Produto\Modelo_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1680,7 +1680,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\Marca_produto">
+    design-time-name="Package\Fluxo Produto\Marca_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1693,7 +1693,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\PRD_ESCOLA_Preco_produto">
+    design-time-name="Package\Fluxo Produto\PRD_ESCOLA_Preco_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1706,7 +1706,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo Planilha Marketing - Database\Ano_produto">
+    design-time-name="Package\Fluxo Produto\Ano_produto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

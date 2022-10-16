@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-UL4QIO3</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAACcwRXYWdCOZVIhg851h/xo9NkEGe8reoR2DkFUYLRHAAAAAAAOgAAAAAIAACAAAAAYKQeCM9w+XoeL1DAT+UFnoRV1PvXEMJCY9SuI5mAH0JAAAADwD9MEfAYWLAj/bCTEbSCpVIybl67IoXTiMS1xZQxJVrynNmRqwDe+aD9kPmBh/1RuiKzs+cY8aq6hw4kwbg7XLAuXvicXpRWecg9afzZCbdHU3NrUZG14ZwwSgUuxRzgLonLHnWwyIaVVsucyjUukEuLxCW2ru9RiRe+ei7XG6Fh6X8SkokaSKSEHSxH7WAxAAAAAgFCg+UT1KTdRsVZSWEuMzI7ZSjFCDEMc6znuyLTdTuG96+MKdssLY/0Fsu+FJpznm/JJX2dac0lYUvZyJeeL/g==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAABqo+kw1QYWGW1uKtt6xNUPXeSBxSCV63imUrzf4MGZ0AAAAAAOgAAAAAIAACAAAAC60erWCSeZ9rcMR4Ivpq2jv7wuw+kvCI/zXfZic9MQtJAAAACUr+OkUWKm4GxqMo8w/Q5uh5X9Is6jtSimnP+/XYILbYtEsdKpx+Hcl+bgLYvzEfgsN+xdIoZauvUGBZJK6yDzkb1vahhSgdT3ggMxuX7Yv92A19rEBb/6Dw+U9fPXflwpZMB0hekIAHuJKYb1kyuBZ1c8ZuelFWwARnMHvBjxaJF7APXd0JTU2d8It1ngSR5AAAAATl1s+cD0Gr1yAXjE/pAMUXeQpxK2RSzewwCYO5IFkWw7Z9BSxOPjPRIjBypZyD045eke+R3gQJSb/RUrny8nNQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -38,6 +38,7 @@
           <SSIS:Package SSIS:Name="Aula 6 - Divindo Fluxo de ETL.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 7 - Importando Dados do Cliente.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 8 - Importandos Dados de Vendas.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Aula 9 - Criando Pacote Main (Principal).dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Planilha Marketing.conmgr" />
@@ -550,10 +551,10 @@
                 <SSIS:Property SSIS:Name="Name">Aula 5 - Criando Loop de Truncate</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">23</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">24</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{2BD125B6-87D1-4209-9121-4E5415EDD7E5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F1A64713-6A81-4032-B18D-034E8E00B183}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -584,10 +585,10 @@
                 <SSIS:Property SSIS:Name="Name">Aula 7 - Importando Dados do Cliente</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5E159A4B-F685-4B96-A2CF-DE4AD6F41B15}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{13EDD7CB-DAD1-43DA-80CF-EFFF77A62512}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -605,6 +606,23 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{111C9B80-742F-431F-8125-98F2EB91EA42}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Aula 9 - Criando Pacote Main (Principal).dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{5B0D7FB1-43A8-4072-9341-AAF15BFCEB1D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Aula 9 - Criando Pacote Main  Principal</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D7B98034-8CB3-4969-A4BF-C0D8D08FFCA5}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
