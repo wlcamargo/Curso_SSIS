@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LOCALHOST.DW_ESCOLA"
+  DTS:DTSID="{0298C804-ED36-40FD-A692-4E4934366A4E}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LOCALHOST;Initial Catalog=DW_ESCOLA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Aula 11 - Criando Dim_Produto no DW-{0298C804-ED36-40FD-A692-4E4934366A4E}LOCALHOST.DW_ESCOLA;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

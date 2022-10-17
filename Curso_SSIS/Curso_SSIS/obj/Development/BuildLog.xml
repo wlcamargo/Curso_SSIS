@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Curso_SSIS</Name>
-    <LastWriteTime>2022-10-16T16:35:34.5684476Z</LastWriteTime>
+    <LastWriteTime>2022-10-17T20:12:27.6559084Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -43,17 +43,32 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 8 - Importandos Dados de Vendas.dtsx</Name>
-      <LastWriteTime>2022-10-16T15:19:09.1214334Z</LastWriteTime>
+      <LastWriteTime>2022-10-16T22:47:02.134783Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 9 - Criando Pacote Main (Principal).dtsx</Name>
-      <LastWriteTime>2022-10-16T15:51:14.2543164Z</LastWriteTime>
+      <LastWriteTime>2022-10-16T20:34:07.105721Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Package2.dtsx</Name>
-      <LastWriteTime>2022-10-16T16:38:13.0974556Z</LastWriteTime>
+      <Name>Aula 10 - ETL_Producao_to_Staging.dtsx</Name>
+      <LastWriteTime>2022-10-16T17:07:35.040586Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Aula 11 - Criando Dim_Produto no DW.dtsx</Name>
+      <LastWriteTime>2022-10-16T18:47:50.7764306Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Aula 12 - Criando Dim_Cliente no DW.dtsx</Name>
+      <LastWriteTime>2022-10-16T20:18:09.2581284Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Aula 13 - Populando Tabela Fato.dtsx</Name>
+      <LastWriteTime>2022-10-17T20:12:27.6160131Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
