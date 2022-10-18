@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Aula 12 - Criando Dim_Cliente no DW"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{61523EFB-7BBC-41BA-A89E-13B095ACB123}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{15B95B90-F1B2-401A-A735-56E31D1B60A4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -47,7 +47,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[dClientes]</property>
+                  name="OpenRowset">[dbo].[dCliente]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -120,7 +120,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="first_name"
-                      externalMetadataColumnId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[PRIMERO_NOME]"
+                      externalMetadataColumnId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[PRIMEIRO_NOME]"
                       lineageId="Package\Dimensao Cliente\Union All.Outputs[Union All Output 1].Columns[first_name]" />
                     <inputColumn
                       refId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].Columns[last_name]"
@@ -209,10 +209,10 @@
                       dataType="i4"
                       name="COD_CLIENTE" />
                     <externalMetadataColumn
-                      refId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[PRIMERO_NOME]"
+                      refId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[PRIMEIRO_NOME]"
                       dataType="wstr"
                       length="255"
-                      name="PRIMERO_NOME" />
+                      name="PRIMEIRO_NOME" />
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[ULTIMO_NOME]"
                       dataType="wstr"
@@ -221,12 +221,12 @@
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[NOME_COMPLETO]"
                       dataType="wstr"
-                      length="511"
+                      length="255"
                       name="NOME_COMPLETO" />
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[ESTADO]"
                       dataType="wstr"
-                      length="255"
+                      length="2"
                       name="ESTADO" />
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\dCliente.Inputs[OLE DB Destination Input].ExternalColumns[CIDADE]"
@@ -454,7 +454,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[dClientes] SET [DATA_FINAL] = ? WHERE [COD_CLIENTE] = ? AND [DATA_FINAL] IS NULL</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[dCliente] SET [DATA_FINAL] = ? WHERE [COD_CLIENTE] = ? AND [DATA_FINAL] IS NULL</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -566,7 +566,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[dClientes] SET [CIDADE] = ?,[DATA_NASCIMENTO] = ?,[EMAIL] = ?,[ESTADO] = ?,[NOME_COMPLETO] = ?,[PRIMERO_NOME] = ?,[SALARIO] = ?,[SCORE] = ?,[TELEFONE] = ?,[TIPO_PROFISSIONAL] = ?,[ULTIMO_NOME] = ? WHERE [COD_CLIENTE] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[dCliente] SET [CIDADE] = ?,[DATA_NASCIMENTO] = ?,[EMAIL] = ?,[ESTADO] = ?,[NOME_COMPLETO] = ?,[PRIMEIRO_NOME] = ?,[SALARIO] = ?,[SCORE] = ?,[TELEFONE] = ?,[TIPO_PROFISSIONAL] = ?,[ULTIMO_NOME] = ? WHERE [COD_CLIENTE] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -709,7 +709,7 @@
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       dataType="wstr"
-                      length="255"
+                      length="2"
                       name="Param_3">
                       <properties>
                         <property
@@ -721,7 +721,7 @@
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       dataType="wstr"
-                      length="511"
+                      length="255"
                       name="Param_4">
                       <properties>
                         <property
@@ -864,7 +864,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[dClientes] SET [EMAIL] = ?,[NOME_COMPLETO] = ?,[PRIMERO_NOME] = ?,[TELEFONE] = ?,[ULTIMO_NOME] = ? WHERE [COD_CLIENTE] = ? AND [DATA_FINAL] IS NULL</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[dCliente] SET [EMAIL] = ?,[NOME_COMPLETO] = ?,[PRIMEIRO_NOME] = ?,[TELEFONE] = ?,[ULTIMO_NOME] = ? WHERE [COD_CLIENTE] = ? AND [DATA_FINAL] IS NULL</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -945,7 +945,7 @@
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\OLE DB Command 2.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       dataType="wstr"
-                      length="511"
+                      length="255"
                       name="Param_1">
                       <properties>
                         <property
@@ -1048,7 +1048,7 @@
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [CIDADE], [COD_CLIENTE], [DATA_NASCIMENTO], [EMAIL], [ESTADO], [NOME_COMPLETO], [PRIMERO_NOME], [SALARIO], [SCORE], [TELEFONE], [TIPO_PROFISSIONAL], [ULTIMO_NOME],[DATA_INICIAL],[DATA_FINAL] FROM [dbo].[dClientes]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [CIDADE], [COD_CLIENTE], [DATA_NASCIMENTO], [EMAIL], [ESTADO], [NOME_COMPLETO], [PRIMEIRO_NOME], [SALARIO], [SCORE], [TELEFONE], [TIPO_PROFISSIONAL], [ULTIMO_NOME],[DATA_INICIAL],[DATA_FINAL] FROM [dbo].[dCliente]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -1183,7 +1183,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="first_name"
-                      externalMetadataColumnId="Package\Dimensao Cliente\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[PRIMERO_NOME]"
+                      externalMetadataColumnId="Package\Dimensao Cliente\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[PRIMEIRO_NOME]"
                       lineageId="Package\Dimensao Cliente\Tabela Cliente.Outputs[OLE DB Source Output].Columns[first_name]">
                       <properties>
                         <property
@@ -1284,18 +1284,18 @@
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[ESTADO]"
                       dataType="wstr"
-                      length="255"
+                      length="2"
                       name="ESTADO" />
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[NOME_COMPLETO]"
                       dataType="wstr"
-                      length="511"
+                      length="255"
                       name="NOME_COMPLETO" />
                     <externalMetadataColumn
-                      refId="Package\Dimensao Cliente\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[PRIMERO_NOME]"
+                      refId="Package\Dimensao Cliente\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[PRIMEIRO_NOME]"
                       dataType="wstr"
                       length="255"
-                      name="PRIMERO_NOME" />
+                      name="PRIMEIRO_NOME" />
                     <externalMetadataColumn
                       refId="Package\Dimensao Cliente\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SALARIO]"
                       dataType="cy"
@@ -2247,13 +2247,13 @@ FROM
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Dimensao Cliente\Tabela Cliente"
-          TopLeft="161.3,5.49999999999995" />
-        <NodeLayout
           Size="208,41.6"
           Id="Package\Dimensao Cliente\Slowly Changing Dimension"
           TopLeft="130.1,107.1" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Dimensao Cliente\Tabela Cliente"
+          TopLeft="161.3,5.49999999999995" />
         <EdgeLayout
           Id="Package\Dimensao Cliente.Paths[OLE DB Source Output]"
           TopLeft="234.1,47.1">
@@ -2457,33 +2457,21 @@ FROM
         <NodeLayout
           Size="116.8,41.6"
           Id="Package\Dimensao Cliente\dCliente"
-          TopLeft="154.5,615.099999999999" />
+          TopLeft="179.499999006589,615.099999999999" />
         <EdgeLayout
           Id="Package\Dimensao Cliente.Paths[Derived Column Output1]"
-          TopLeft="234.1,555.1">
+          TopLeft="235.999999503295,555.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-21.2,59.9999999999999"
+              EndConnector="0,59.9999999999999"
               Start="0,0"
-              End="-21.2,52.4999999999999">
+              End="0,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.9999999999999"
-                    Point2="0,29.9999999999999"
-                    Point3="-4,29.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-17.2,29.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.2,29.9999999999999"
-                    Point2="-21.2,29.9999999999999"
-                    Point3="-21.2,33.9999999999999" />
-                  <mssgle:LineSegment
-                    End="-21.2,52.4999999999999" />
+                    End="0,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2576,14 +2564,6 @@ FROM
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Dimensao Cliente\Tabela Cliente">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Dimensao Cliente\Slowly Changing Dimension">
     <Properties>
       <Property>
@@ -2592,7 +2572,7 @@ FROM
           type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionID&gt;{0298C804-ED36-40FD-A692-4E4934366A4E}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[dClientes]&lt;/TableName&gt;
+  &lt;TableName&gt;[dbo].[dCliente]&lt;/TableName&gt;
   &lt;InputToColumnsCollection&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Tabela Cliente.Outputs[OLE DB Source Output].Columns[city]&lt;/IdentificationString&gt;
@@ -2632,7 +2612,7 @@ FROM
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Tabela Cliente.Outputs[OLE DB Source Output].Columns[first_name]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;PRIMERO_NOME&lt;/ColumnName&gt;
+      &lt;ColumnName&gt;PRIMEIRO_NOME&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
@@ -2688,6 +2668,27 @@ FROM
   &lt;DateVariable&gt;System::CreationDate&lt;/DateVariable&gt;
   &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensao Cliente\Tabela Cliente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dimensao Cliente\dCliente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

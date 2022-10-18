@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-UL4QIO3</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAACNaK4hMZh/gX32lXlZB5Pis1YbSZgfzTQxLUUBP63DAAAAAAAOgAAAAAIAACAAAAApvbd+i6uRnfRMG1mpbQOjZKOTyWukfc7WhHpgg9lJ+pAAAADaUjXVSeLbgj8aHCmjGXQdgNtOJVZGW8UmVOXlFks8J2ewZMCRn+8PP2EpQl+6N12HLrzvQypdrL+IBsp/BndJ1+eUxGf4q2E1jS1nC0JMoCysT5sUfqs18dwUPD/gmL6TOnxADCS73mwBcxXFXjP8llA2goFNhc3nT7R94fpF2uWXab3DME0mIEZm3CoUtIBAAAAALB7P4NDE9H0OGqHBR4oR1idCfvKf/vm2H7ZKUNboOf5I+DIfohpa+hVN94MTJslgqt45/14MnmQ6rrg2wDTPhg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAACFkyr9EYt4Vz6TvMYgsBF2b/zY1sxQoqds2h58DNBDTAAAAAAOgAAAAAIAACAAAABLlWuE3qjscvsB7g/eTPv4mrY4nmm7+NZoDN1k9dhSXJAAAAADP1q9J6UUOM+Agrs21lNuTz3t4f9E0/G4mMdex/45XRW1glqV51hAd7tU8rMjqOmoLnDBxNQdjpDnrSTHRAliz5DZjzy+j6JHnY4KaS2fV52+LYb7tJFg5h790usHHcb3XvRb+krbFObjCQNwsQWv40PlSrYqVCJYqk9E1GD21H2o3Cd2wZRpI1XGPOzicANAAAAAPZyAPA+YIGg08ID9a5gZNdy/1zGSIsK6cT8bM0BdXaqdQgtqgRsYRyk37uAy9LwlmuD9RsxCs2/wxXNzSP2fYg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -43,6 +43,7 @@
           <SSIS:Package SSIS:Name="Aula 11 - Criando Dim_Produto no DW.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 12 - Criando Dim_Cliente no DW.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 13 - Populando Tabela Fato.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Aula 14 - Orquestracao_MKT.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Planilha Marketing.conmgr" />
@@ -1018,7 +1019,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">160</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1033,6 +1034,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1093,10 +1096,27 @@
                 <SSIS:Property SSIS:Name="Name">Aula 13 - Populando Tabela Fato</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{3FECE6F2-536E-4B9E-B64D-D603FF410704}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6742781F-8F37-4839-81C4-3719BFCA46BA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Aula 14 - Orquestracao_MKT.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{BAAA9ECD-6EB7-49A8-BA65-23DFDAEB6362}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Aula 14 - Orquestracao_MKT</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9B9D4597-E61D-43FD-AFA3-47EA138237F8}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
