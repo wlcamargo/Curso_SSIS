@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Curso_SSIS</Name>
-    <LastWriteTime>2022-10-17T22:35:13.1911166Z</LastWriteTime>
+    <LastWriteTime>2022-10-19T22:55:50.1248402Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -58,12 +58,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 11 - Criando Dim_Produto no DW.dtsx</Name>
-      <LastWriteTime>2022-10-16T18:47:50.7764306Z</LastWriteTime>
+      <LastWriteTime>2022-10-19T20:45:08.6748088Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 12 - Criando Dim_Cliente no DW.dtsx</Name>
-      <LastWriteTime>2022-10-17T23:52:23.1472944Z</LastWriteTime>
+      <LastWriteTime>2022-10-19T20:31:22.7551553Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -72,8 +72,13 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Aula 14 - Orquestracao_MKT.dtsx</Name>
-      <LastWriteTime>2022-10-18T00:00:08.8498641Z</LastWriteTime>
+      <Name>Aula 14 - Orquestração MKT.dtsx</Name>
+      <LastWriteTime>2022-10-18T22:16:46.0627127Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Package3.dtsx</Name>
+      <LastWriteTime>2022-10-19T22:55:50.1058907Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
