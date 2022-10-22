@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-UL4QIO3</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAABsbD5pk7V3aDlnbbBa+20rC8wxilpQkKE9DUCMjnetjAAAAAAOgAAAAAIAACAAAACPpT1cppwKhi90EeiJdHCK4dMMIxHkhOLKl6ysEXjF85AAAACdnBs1KF6FTWL0HCbfjKx8Cw9PdGGs+6ckTnoAzU8nIiCdGj80A0bPKE0p7PjcdGaJXjOmMJY7Ky/sZPNZf76vlopNdnkqlfFROl1J3eKJVAHolBBJOVDv3yW/6mxn6Nqu/hnXZITw0h4whtiKT7LxY6N/BIi9AVk+3bqVRkcAz8H6vtafASombFfH7YLt3SdAAAAAM6BUE/jH5+4ksqc0FR2cSB9VoNztJKfpdzKO5TDTZKPQnWAyHCTlMe6rS4Cqf3wFwmn0LFfigjjkJofKMKxMvQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh52B8LzzPUWo8EFuLB4mggAAAAACAAAAAAAQZgAAAAEAACAAAAAMNyfEKn0Y8m8raqxWzHPdI/9yMCyja/vTkCu4fFHXLgAAAAAOgAAAAAIAACAAAABIny6UTKjQnRJ19HjE4dASM8pnFEoMiNw7rVhl8uGuIJAAAADC6+szbNHhnJIUr7QKsNiiuOcU5goK8hvOjnm0ngbubetk0yu8H9rQyy7EhQaaHVB4IXGt/8+N2MP3wmMZCpFWkxc335trmc0rEQmqoqOUceJt0Yj2Vtn4Xir8LZ8eGYIb8CcBpmVw116RhucYtg/esPoi0Hd0bopz8B56X7yd14S8RmQzYAmMsnyLRgq51FRAAAAA0eHTezQw3HrCV7dmDrEhpJynLSFqPGCbHMHQA5R/fpwO3qhA3CyfFWHR4mxoGERVBq3xiU4edpX5fRKM8PTS+Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -41,9 +41,10 @@
           <SSIS:Package SSIS:Name="Aula 9 - Criando Pacote Main (Principal).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 10 - ETL_Producao_to_Staging.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Aula 11 - Criando Dim_Produto no DW.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Aula 12 - Criando Dim_Cliente no DW.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Aula 13 - Populando Tabela Fato.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Aula 14 - Orquestração MKT.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Aula 12 - Criando dCliente.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Aula 13 - Criando Dimensao Calendario.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Aula 14 - Criando Tabela Fato.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Aula 15 - Criando Orquestrador MKT.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Planilha Marketing.conmgr" />
@@ -1034,6 +1035,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1071,16 +1074,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Aula 12 - Criando Dim_Cliente no DW.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Aula 12 - Criando dCliente.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{DB44570A-385C-4114-B189-2A8D11C19515}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Aula 12 - Criando Dim_Cliente no DW</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{D340C260-917B-4DE7-88AB-58EF71FA3484}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Aula 12 - Criando dCliente</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{61523EFB-7BBC-41BA-A89E-13B095ACB123}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{85778A78-3D20-4BFE-B64C-CA5EE4B651F4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1088,16 +1091,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Aula 13 - Populando Tabela Fato.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Aula 13 - Criando Dimensao Calendario.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{38514D08-F37F-46A1-9DF6-D246CB523789}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Aula 13 - Populando Tabela Fato</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{0E1E1118-3348-4663-AC43-996111E5E80D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Aula 13 - Criando Dimensao Calendario</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6742781F-8F37-4839-81C4-3719BFCA46BA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E617C5B8-3F31-4422-9E84-E09F59EB8F9C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1105,16 +1108,33 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Aula 14 - Orquestração MKT.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Aula 14 - Criando Tabela Fato.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{997E3238-F5C0-4DA4-A794-3CD4CB5BA849}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Aula 14 - Orquestração MKT</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{7618EFC6-003D-4A58-9524-323865970E6C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Aula 14 - Criando Tabela Fato</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7846F8F5-E0D5-4DE0-B9E7-28E4B8AF9C7A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Aula 15 - Criando Orquestrador MKT.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{50E9115C-2823-478F-B1C8-576AB2E23578}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Aula 15 - Criando Orquestrador MKT</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{8E6765D4-8EA8-4EDA-A4FD-F005EC3D614A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4EBA1D99-647D-48A4-AA7F-70A7CE3B88B1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

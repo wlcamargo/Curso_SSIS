@@ -1,30 +1,30 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="10/17/2022 5:00:09 PM"
+  DTS:CreationDate="10/22/2022 2:46:39 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-UL4QIO3"
   DTS:CreatorName="DESKTOP-UL4QIO3\walla"
-  DTS:DTSID="{38514D08-F37F-46A1-9DF6-D246CB523789}"
+  DTS:DTSID="{7618EFC6-003D-4A58-9524-323865970E6C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="2070"
-  DTS:ObjectName="Aula 13 - Populando Tabela Fato"
+  DTS:ObjectName="Aula 14 - Criando Tabela Fato"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{48C37293-E3A3-4302-BC17-B9F5B385B303}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{7846F8F5-E0D5-4DE0-B9E7-28E4B8AF9C7A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Fluxo da Fato"
+      DTS:refId="Package\Fluxo tabela fato"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{3DEFE162-A64B-4FE5-B20A-35D4FF353DF1}"
+      DTS:DTSID="{79F7DCD4-9551-4BA8-8888-ACA7A89C9A45}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Fluxo da Fato"
+      DTS:ObjectName="Fluxo tabela fato"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -32,47 +32,47 @@
           version="1">
           <components>
             <component
-              refId="Package\Fluxo da Fato\Calculando Valor Total"
+              refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Calculando Valor Total"
+              name="CALCULA VALOR TOTAL"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Fluxo da Fato\Calculando Valor Total.Inputs[Derived Column Input]"
+                  refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo da Fato\Calculando Valor Total.Inputs[Derived Column Input].Columns[quantity]"
+                      refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Inputs[Derived Column Input].Columns[quantity]"
                       cachedDataType="i4"
                       cachedName="quantity"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[quantity]" />
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[quantity]" />
                     <inputColumn
-                      refId="Package\Fluxo da Fato\Calculando Valor Total.Inputs[Derived Column Input].Columns[price]"
+                      refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Inputs[Derived Column Input].Columns[price]"
                       cachedDataType="cy"
                       cachedName="price"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[price]" />
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[price]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Output]"
+                  refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Fluxo da Fato\Calculando Valor Total.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Output].Columns[Valor_Total]"
+                      refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Output].Columns[VALOR_TOTAL]"
                       dataType="numeric"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Output].Columns[Valor_Total]"
-                      name="Valor_Total"
+                      lineageId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Output].Columns[VALOR_TOTAL]"
+                      name="VALOR_TOTAL"
                       precision="30"
                       scale="4"
                       truncationRowDisposition="FailComponent">
@@ -81,7 +81,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[quantity]} * #{Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[price]}</property>
+                          name="Expression">#{Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[quantity]} * #{Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[price]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -94,23 +94,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Error Output]"
+                  refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Fluxo da Fato\Calculando Valor Total.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -119,7 +119,219 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo da Fato\fVendas"
+              refId="Package\Fluxo tabela fato\DADOS DE VENDAS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="DADOS DE VENDAS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+	V.Venda_Id,
+	DV.paid_date,
+	CC.Cliente_id,
+	PV.product_id,
+	QV.quantity,
+	PP.price
+FROM 
+	[dbo].[Venda_id] V
+	INNER JOIN [dbo].[Data_venda] DV ON V.Venda_Id = DV.Venda_id
+	INNER JOIN [dbo].[Cliente_comprou] CC ON V.Venda_Id = CC.Venda_Id 
+	INNER JOIN [dbo].[Produto_vendido]	PV ON V.Venda_Id = PV.Venda_Id
+	INNER JOIN [dbo].[Quantidade_vendida] QV ON V.Venda_Id = QV.Venda_id
+	INNER JOIN [dbo].[Preco_produto] PP ON PV.product_id = PP.product_id
+WHERE
+	V.Venda_Id &gt; (SELECT MAX(PK_VENDA) FROM [DW_ESCOLA].dbo.fVendas)
+	OR (SELECT MAX(PK_VENDA) FROM [DW_ESCOLA].dbo.fVendas) IS NULL</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Connections[OleDbConnection]"
+                  connectionManagerID="{9F7C6572-5849-4CE8-8876-7B9E7CE63BC1}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.STG_ESCOLA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[Venda_Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[Venda_Id]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[Venda_Id]"
+                      name="Venda_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[paid_date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[paid_date]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[paid_date]"
+                      name="paid_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[Cliente_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[Cliente_id]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[Cliente_id]"
+                      name="Cliente_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[product_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[product_id]"
+                      name="product_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[quantity]"
+                      name="quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[price]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[price]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[price]"
+                      name="price"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[Venda_Id]"
+                      dataType="i4"
+                      name="Venda_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[paid_date]"
+                      dataType="dbDate"
+                      name="paid_date" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[Cliente_id]"
+                      dataType="i4"
+                      name="Cliente_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      dataType="i4"
+                      name="product_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].ExternalColumns[price]"
+                      dataType="cy"
+                      name="price" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[Venda_Id]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[Venda_Id]"
+                      name="Venda_Id" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[paid_date]"
+                      dataType="dbDate"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[paid_date]"
+                      name="paid_date" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[Cliente_id]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[Cliente_id]"
+                      name="Cliente_id" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      name="product_id" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      name="quantity" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[price]"
+                      dataType="cy"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[price]"
+                      name="price" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fluxo tabela fato\fVendas"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -176,7 +388,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo da Fato\fVendas.Connections[OleDbConnection]"
+                  refId="Package\Fluxo tabela fato\fVendas.Connections[OleDbConnection]"
                   connectionManagerID="{0298C804-ED36-40FD-A692-4E4934366A4E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LOCALHOST.DW_ESCOLA]"
                   description="The OLE DB runtime connection used to access the database."
@@ -184,75 +396,85 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input]"
+                  refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].Columns[Valor_Total]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].Columns[VALOR_TOTAL]"
                       cachedDataType="numeric"
-                      cachedName="Valor_Total"
+                      cachedName="VALOR_TOTAL"
                       cachedPrecision="30"
                       cachedScale="4"
-                      externalMetadataColumnId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_TOTAL]"
-                      lineageId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Output].Columns[Valor_Total]" />
+                      externalMetadataColumnId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_TOTAL]"
+                      lineageId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Output].Columns[VALOR_TOTAL]" />
                     <inputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].Columns[SK_CLIENTE]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].Columns[SK_CLIENTE]"
                       cachedDataType="i4"
                       cachedName="SK_CLIENTE"
-                      externalMetadataColumnId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_CLIENTE]"
-                      lineageId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Match Output].Columns[SK_CLIENTE]" />
+                      externalMetadataColumnId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_CLIENTE]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Match Output].Columns[SK_CLIENTE]" />
                     <inputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].Columns[SK_PRODUTO]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].Columns[SK_PRODUTO]"
                       cachedDataType="i4"
                       cachedName="SK_PRODUTO"
-                      externalMetadataColumnId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_PRODUTO]"
-                      lineageId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Match Output].Columns[SK_PRODUTO]" />
+                      externalMetadataColumnId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_PRODUTO]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Match Output].Columns[SK_PRODUTO]" />
                     <inputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].Columns[PK_DATA]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].Columns[Venda_Id]"
+                      cachedDataType="i4"
+                      cachedName="Venda_Id"
+                      externalMetadataColumnId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PK_VENDA]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[Venda_Id]" />
+                    <inputColumn
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].Columns[PK_DATA]"
                       cachedDataType="i4"
                       cachedName="PK_DATA"
-                      externalMetadataColumnId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PK_DATA]"
-                      lineageId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Match Output].Columns[PK_DATA]" />
+                      externalMetadataColumnId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[FK_DATA]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Match Output].Columns[PK_DATA]" />
                     <inputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].Columns[quantity]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].Columns[quantity]"
                       cachedDataType="i4"
                       cachedName="quantity"
-                      externalMetadataColumnId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[QUANTIDADE]"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[quantity]" />
+                      externalMetadataColumnId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[QUANTIDADE]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[quantity]" />
                     <inputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].Columns[price]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].Columns[price]"
                       cachedDataType="cy"
                       cachedName="price"
-                      externalMetadataColumnId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PRECO_ATUAL]"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[price]" />
+                      externalMetadataColumnId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PRECO]"
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[price]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PK_DATA]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PK_VENDA]"
                       dataType="i4"
-                      name="PK_DATA" />
+                      name="PK_VENDA" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_PRODUTO]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[FK_DATA]"
+                      dataType="i4"
+                      name="FK_DATA" />
+                    <externalMetadataColumn
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_PRODUTO]"
                       dataType="i4"
                       name="SK_PRODUTO" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_CLIENTE]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[SK_CLIENTE]"
                       dataType="i4"
                       name="SK_CLIENTE" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[QUANTIDADE]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[QUANTIDADE]"
                       dataType="i4"
                       name="QUANTIDADE" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PRECO_ATUAL]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[PRECO]"
                       dataType="cy"
-                      name="PRECO_ATUAL" />
+                      name="PRECO" />
                     <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_TOTAL]"
+                      refId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input].ExternalColumns[VALOR_TOTAL]"
                       dataType="cy"
                       name="VALOR_TOTAL" />
                   </externalMetadataColumns>
@@ -260,22 +482,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo da Fato\fVendas.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Fluxo tabela fato\fVendas.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo tabela fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo tabela fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo da Fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo tabela fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo tabela fato\fVendas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -284,7 +506,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo da Fato\Lookup Calendario"
+              refId="Package\Fluxo tabela fato\Lookup Calendario"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -340,7 +562,7 @@ where [refTable].[DATA] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[paid_date]};</property>
+                  name="ParameterMap">#{Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[paid_date]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -352,7 +574,7 @@ where [refTable].[DATA] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo da Fato\Lookup Calendario.Connections[OleDbConnection]"
+                  refId="Package\Fluxo tabela fato\Lookup Calendario.Connections[OleDbConnection]"
                   connectionManagerID="{0298C804-ED36-40FD-A692-4E4934366A4E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LOCALHOST.DW_ESCOLA]"
                   description="Connection manager used to access lookup data."
@@ -360,14 +582,14 @@ where [refTable].[DATA] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo da Fato\Lookup Calendario.Inputs[Lookup Input]"
+                  refId="Package\Fluxo tabela fato\Lookup Calendario.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo da Fato\Lookup Calendario.Inputs[Lookup Input].Columns[paid_date]"
+                      refId="Package\Fluxo tabela fato\Lookup Calendario.Inputs[Lookup Input].Columns[paid_date]"
                       cachedDataType="dbDate"
                       cachedName="paid_date"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[paid_date]">
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[paid_date]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -385,18 +607,18 @@ where [refTable].[DATA] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Match Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Calendario.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Calendario.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Match Output].Columns[PK_DATA]"
+                      refId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Match Output].Columns[PK_DATA]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Match Output].Columns[PK_DATA]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Match Output].Columns[PK_DATA]"
                       name="PK_DATA"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -410,30 +632,30 @@ where [refTable].[DATA] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup No Match Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Calendario.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Calendario.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Error Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Calendario.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Calendario.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -442,7 +664,7 @@ where [refTable].[DATA] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo da Fato\Lookup Cliente"
+              refId="Package\Fluxo tabela fato\Lookup Cliente"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -455,13 +677,41 @@ where [refTable].[DATA] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM [DW_ESCOLA].[dbo].[dCliente] WHERE DATA_FINAL is null</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  [SK_CLIENTE]
+      ,[DATA_INICIAL]
+      ,[DATA_FINAL]
+      ,[COD_CLIENTE]
+      ,[PRIMEIRO_NOME]
+      ,[ULTIMO_NOME]
+      ,[NOME_COMPLETO]
+      ,[ESTADO]
+      ,[DATA_NASCIMENTO]
+      ,[SALARIO]
+      ,[SCORE]
+      ,[TIPO_PROFISSIONAL]
+      ,[EMAIL]
+  FROM [DW_ESCOLA].[dbo].[dCliente]
+  WHERE DATA_FINAL IS NULL</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT * FROM [DW_ESCOLA].[dbo].[dCliente] WHERE DATA_FINAL is null) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT  [SK_CLIENTE]
+      ,[DATA_INICIAL]
+      ,[DATA_FINAL]
+      ,[COD_CLIENTE]
+      ,[PRIMEIRO_NOME]
+      ,[ULTIMO_NOME]
+      ,[NOME_COMPLETO]
+      ,[ESTADO]
+      ,[DATA_NASCIMENTO]
+      ,[SALARIO]
+      ,[SCORE]
+      ,[TIPO_PROFISSIONAL]
+      ,[EMAIL]
+  FROM [DW_ESCOLA].[dbo].[dCliente]
+  WHERE DATA_FINAL IS NULL) [refTable]
 where [refTable].[COD_CLIENTE] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -493,12 +743,12 @@ where [refTable].[COD_CLIENTE] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_CLIENTE" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_INICIAL" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_FINAL" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="COD_CLIENTE" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PRIMEIRO_NOME" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ULTIMO_NOME" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NOME_COMPLETO" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ESTADO" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CIDADE" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_NASCIMENTO" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SALARIO" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SCORE" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TIPO_PROFISSIONAL" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EMAIL" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TELEFONE" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SK_CLIENTE" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_INICIAL" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_FINAL" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="COD_CLIENTE" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PRIMEIRO_NOME" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ULTIMO_NOME" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NOME_COMPLETO" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ESTADO" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_NASCIMENTO" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SALARIO" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SCORE" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TIPO_PROFISSIONAL" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EMAIL" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[Cliente_id]};</property>
+                  name="ParameterMap">#{Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[Cliente_id]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -510,7 +760,7 @@ where [refTable].[COD_CLIENTE] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo da Fato\Lookup Cliente.Connections[OleDbConnection]"
+                  refId="Package\Fluxo tabela fato\Lookup Cliente.Connections[OleDbConnection]"
                   connectionManagerID="{0298C804-ED36-40FD-A692-4E4934366A4E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LOCALHOST.DW_ESCOLA]"
                   description="Connection manager used to access lookup data."
@@ -518,14 +768,14 @@ where [refTable].[COD_CLIENTE] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo da Fato\Lookup Cliente.Inputs[Lookup Input]"
+                  refId="Package\Fluxo tabela fato\Lookup Cliente.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo da Fato\Lookup Cliente.Inputs[Lookup Input].Columns[Cliente_id]"
+                      refId="Package\Fluxo tabela fato\Lookup Cliente.Inputs[Lookup Input].Columns[Cliente_id]"
                       cachedDataType="i4"
                       cachedName="Cliente_id"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[Cliente_id]">
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[Cliente_id]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -543,18 +793,18 @@ where [refTable].[COD_CLIENTE] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Match Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Cliente.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Cliente.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Match Output].Columns[SK_CLIENTE]"
+                      refId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Match Output].Columns[SK_CLIENTE]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Match Output].Columns[SK_CLIENTE]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Match Output].Columns[SK_CLIENTE]"
                       name="SK_CLIENTE"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -568,30 +818,30 @@ where [refTable].[COD_CLIENTE] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup No Match Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Cliente.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Cliente.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Error Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Cliente.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Cliente.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -600,7 +850,7 @@ where [refTable].[COD_CLIENTE] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Fluxo da Fato\Lookup Produto"
+              refId="Package\Fluxo tabela fato\Lookup Produto"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -613,13 +863,31 @@ where [refTable].[COD_CLIENTE] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM [DW_ESCOLA].[dbo].[dProdutos] WHERE DATA_FINAL is null</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [SK_PRODUTO]
+      ,[DATA_INICIAL]
+      ,[DATA_FINAL]
+      ,[COD_PRODUTO]
+      ,[MODELO]
+      ,[MARCA]
+      ,[ANO_CARRO]
+      ,[PRECO]
+  FROM [DW_ESCOLA].[dbo].[dProdutos]
+  WHERE DATA_FINAL IS NULL</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT * FROM [DW_ESCOLA].[dbo].[dProdutos] WHERE DATA_FINAL is null) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT [SK_PRODUTO]
+      ,[DATA_INICIAL]
+      ,[DATA_FINAL]
+      ,[COD_PRODUTO]
+      ,[MODELO]
+      ,[MARCA]
+      ,[ANO_CARRO]
+      ,[PRECO]
+  FROM [DW_ESCOLA].[dbo].[dProdutos]
+  WHERE DATA_FINAL IS NULL) [refTable]
 where [refTable].[COD_PRODUTO] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -656,7 +924,7 @@ where [refTable].[COD_PRODUTO] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[product_id]};</property>
+                  name="ParameterMap">#{Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[product_id]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -668,7 +936,7 @@ where [refTable].[COD_PRODUTO] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fluxo da Fato\Lookup Produto.Connections[OleDbConnection]"
+                  refId="Package\Fluxo tabela fato\Lookup Produto.Connections[OleDbConnection]"
                   connectionManagerID="{0298C804-ED36-40FD-A692-4E4934366A4E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LOCALHOST.DW_ESCOLA]"
                   description="Connection manager used to access lookup data."
@@ -676,14 +944,14 @@ where [refTable].[COD_PRODUTO] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fluxo da Fato\Lookup Produto.Inputs[Lookup Input]"
+                  refId="Package\Fluxo tabela fato\Lookup Produto.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fluxo da Fato\Lookup Produto.Inputs[Lookup Input].Columns[product_id]"
+                      refId="Package\Fluxo tabela fato\Lookup Produto.Inputs[Lookup Input].Columns[product_id]"
                       cachedDataType="i4"
                       cachedName="product_id"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[product_id]">
+                      lineageId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output].Columns[product_id]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -701,18 +969,18 @@ where [refTable].[COD_PRODUTO] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Match Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Produto.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Produto.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Match Output].Columns[SK_PRODUTO]"
+                      refId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Match Output].Columns[SK_PRODUTO]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Match Output].Columns[SK_PRODUTO]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Match Output].Columns[SK_PRODUTO]"
                       name="SK_PRODUTO"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -726,220 +994,30 @@ where [refTable].[COD_PRODUTO] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup No Match Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Produto.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Produto.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Error Output]"
+                  refId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Fluxo da Fato\Lookup Produto.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Fluxo tabela fato\Lookup Produto.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Fluxo da Fato\STG_Vendas"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="STG_Vendas"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
-	DV.paid_date,
-	PV.product_id,
-	CC.Cliente_id,
-	QV.quantity,
-	PP.price
-FROM 
-	Venda_id V
-	INNER JOIN Produto_vendido PV ON PV.Venda_Id = V.Venda_Id
-	INNER JOIN Data_venda DV ON DV.Venda_id = V.Venda_Id
-	INNER JOIN Quantidade_vendida QV ON QV.Venda_id = V.Venda_Id
-	INNER JOIN Cliente_comprou CC ON CC.Venda_Id = V.Venda_Id
-	INNER JOIN Preco_produto PP ON PP.product_id = PV.product_id</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Fluxo da Fato\STG_Vendas.Connections[OleDbConnection]"
-                  connectionManagerID="{9F7C6572-5849-4CE8-8876-7B9E7CE63BC1}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.STG_ESCOLA]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[paid_date]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[paid_date]"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[paid_date]"
-                      name="paid_date"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[product_id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[product_id]"
-                      name="product_id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[Cliente_id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[Cliente_id]"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[Cliente_id]"
-                      name="Cliente_id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[quantity]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[quantity]"
-                      name="quantity"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[price]"
-                      dataType="cy"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[price]"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].Columns[price]"
-                      name="price"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[paid_date]"
-                      dataType="dbDate"
-                      name="paid_date" />
-                    <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
-                      dataType="i4"
-                      name="product_id" />
-                    <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[Cliente_id]"
-                      dataType="i4"
-                      name="Cliente_id" />
-                    <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
-                      dataType="i4"
-                      name="quantity" />
-                    <externalMetadataColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output].ExternalColumns[price]"
-                      dataType="cy"
-                      name="price" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[paid_date]"
-                      dataType="dbDate"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[paid_date]"
-                      name="paid_date" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[product_id]"
-                      dataType="i4"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[product_id]"
-                      name="product_id" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[Cliente_id]"
-                      dataType="i4"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[Cliente_id]"
-                      name="Cliente_id" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[quantity]"
-                      dataType="i4"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[quantity]"
-                      name="quantity" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[price]"
-                      dataType="cy"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[price]"
-                      name="price" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -950,30 +1028,30 @@ FROM
           </components>
           <paths>
             <path
-              refId="Package\Fluxo da Fato.Paths[Derived Column Output]"
-              endId="Package\Fluxo da Fato\Lookup Cliente.Inputs[Lookup Input]"
+              refId="Package\Fluxo tabela fato.Paths[Derived Column Output]"
+              endId="Package\Fluxo tabela fato\Lookup Cliente.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Fluxo da Fato\Calculando Valor Total.Outputs[Derived Column Output]" />
+              startId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Fluxo da Fato.Paths[Lookup Match Output]"
-              endId="Package\Fluxo da Fato\Lookup Produto.Inputs[Lookup Input]"
+              refId="Package\Fluxo tabela fato.Paths[Lookup Match Output]"
+              endId="Package\Fluxo tabela fato\Lookup Produto.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Fluxo da Fato\Lookup Cliente.Outputs[Lookup Match Output]" />
+              startId="Package\Fluxo tabela fato\Lookup Cliente.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Fluxo da Fato.Paths[Lookup Match Output1]"
-              endId="Package\Fluxo da Fato\Lookup Calendario.Inputs[Lookup Input]"
+              refId="Package\Fluxo tabela fato.Paths[Lookup Match Output1]"
+              endId="Package\Fluxo tabela fato\Lookup Calendario.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Fluxo da Fato\Lookup Produto.Outputs[Lookup Match Output]" />
+              startId="Package\Fluxo tabela fato\Lookup Produto.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Fluxo da Fato.Paths[Lookup Match Output2]"
-              endId="Package\Fluxo da Fato\fVendas.Inputs[OLE DB Destination Input]"
+              refId="Package\Fluxo tabela fato.Paths[Lookup Match Output2]"
+              endId="Package\Fluxo tabela fato\fVendas.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Fluxo da Fato\Lookup Calendario.Outputs[Lookup Match Output]" />
+              startId="Package\Fluxo tabela fato\Lookup Calendario.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Fluxo da Fato.Paths[OLE DB Source Output]"
-              endId="Package\Fluxo da Fato\Calculando Valor Total.Inputs[Derived Column Input]"
+              refId="Package\Fluxo tabela fato.Paths[OLE DB Source Output]"
+              endId="Package\Fluxo tabela fato\CALCULA VALOR TOTAL.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Fluxo da Fato\STG_Vendas.Outputs[OLE DB Source Output]" />
+              startId="Package\Fluxo tabela fato\DADOS DE VENDAS.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -992,162 +1070,170 @@ FROM
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="141.6,41.6"
-          Id="Package\Fluxo da Fato"
-          TopLeft="230.833324160841,63.266667169465" />
+          Size="155.2,41.6"
+          Id="Package\Fluxo tabela fato"
+          TopLeft="251.666656666332,61.5333338223564" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Fluxo da Fato">
+    design-time-name="Package\Fluxo tabela fato">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Fluxo tabela fato\DADOS DE VENDAS"
+          TopLeft="221.666657858425,12.1333334297604" />
+        <NodeLayout
+          Size="200.8,41.6"
+          Id="Package\Fluxo tabela fato\CALCULA VALOR TOTAL"
+          TopLeft="214.166658156448,104.866667500072" />
+        <EdgeLayout
+          Id="Package\Fluxo tabela fato.Paths[OLE DB Source Output]"
+          TopLeft="312.716658007437,53.7333334297604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.1333340703117"
+              Start="0,0"
+              End="0,43.6333340703117">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.6333340703117" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
           Size="148,41.6"
-          Id="Package\Fluxo da Fato\Lookup Cliente"
-          TopLeft="269.166655970945,175.066668057972" />
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Fluxo da Fato\STG_Vendas"
-          TopLeft="271.666655871604,16.466666797532" />
-        <NodeLayout
-          Size="116.8,41.6"
-          Id="Package\Fluxo da Fato\fVendas"
-          TopLeft="289.999988476436,469.200002024968" />
-        <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Fluxo da Fato\Lookup Calendario"
-          TopLeft="268.333322670725,367.133334979481" />
+          Id="Package\Fluxo tabela fato\Lookup Cliente"
+          TopLeft="239.166657163037,190.666668181949" />
+        <EdgeLayout
+          Id="Package\Fluxo tabela fato.Paths[Derived Column Output]"
+          TopLeft="313.866657659743,146.466667500072">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.2000006818772"
+              Start="0,0"
+              End="0,36.7000006818772">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.7000006818772" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="152,41.6"
-          Id="Package\Fluxo da Fato\Lookup Produto"
-          TopLeft="270.833322571384,272.200002086957" />
+          Id="Package\Fluxo tabela fato\Lookup Produto"
+          TopLeft="239.999990463257,280.800002231598" />
+        <EdgeLayout
+          Id="Package\Fluxo tabela fato.Paths[Lookup Match Output]"
+          TopLeft="314.583323813147,232.266668181949">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.5333340496486"
+              Start="0,0"
+              End="0,41.0333340496486">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.0333340496486" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.7119795248243,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Fluxo da Fato\Calculando Valor Total"
-          TopLeft="249.999990065893,97.0666674380833" />
+          Size="165.6,41.6"
+          Id="Package\Fluxo tabela fato\Lookup Calendario"
+          TopLeft="228.333324260182,386.533335909314" />
         <EdgeLayout
-          Id="Package\Fluxo da Fato.Paths[OLE DB Source Output]"
-          TopLeft="341.833322968748,58.066666797532">
+          Id="Package\Fluxo tabela fato.Paths[Lookup Match Output1]"
+          TopLeft="313.56665736172,322.400002231598">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.0000006405513"
+              EndConnector="0,64.1333336777157"
               Start="0,0"
-              End="0,31.5000006405513">
+              End="0,56.6333336777157">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5000006405513" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fluxo da Fato.Paths[Lookup Match Output2]"
-          TopLeft="349.76665557358,408.733334979481">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.466667045487"
-              Start="0,0"
-              End="0,52.966667045487">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.966667045487" />
+                    End="0,56.6333336777157" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.6786460227435,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,22.5119793388578,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="116.8,41.6"
+          Id="Package\Fluxo tabela fato\fVendas"
+          TopLeft="253.333323266772,492.600002376238" />
         <EdgeLayout
-          Id="Package\Fluxo da Fato.Paths[Lookup Match Output1]"
-          TopLeft="348.983322621055,313.800002086957">
+          Id="Package\Fluxo tabela fato.Paths[Lookup Match Output2]"
+          TopLeft="311.433323763477,428.133335909314">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53.3333328925239"
+              EndConnector="0,64.4666664669248"
               Start="0,0"
-              End="0,45.8333328925239">
+              End="0,56.9666664669248">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.8333328925239" />
+                    End="0,56.9666664669248" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,17.111978946262,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,22.6786457334624,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fluxo da Fato.Paths[Lookup Match Output]"
-          TopLeft="344.999989271165,216.666668057972">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.5333340289856"
-              Start="0,0"
-              End="0,48.0333340289856">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.0333340289856" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,18.2119795144928,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fluxo da Fato.Paths[Derived Column Output]"
-          TopLeft="342.383323018419,138.666667438083">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.4000006198884"
-              Start="0,0"
-              End="0,28.9000006198884">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.9000006198884" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo da Fato\Lookup Cliente">
+    design-time-name="Package\Fluxo tabela fato\DADOS DE VENDAS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo tabela fato\Lookup Cliente">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -1170,56 +1256,12 @@ FROM
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fluxo da Fato\STG_Vendas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fluxo da Fato\fVendas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fluxo da Fato\Lookup Calendario">
+    design-time-name="Package\Fluxo tabela fato\Lookup Produto">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dCalendario]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fluxo da Fato\Lookup Produto">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1229,10 +1271,46 @@ FROM
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo tabela fato\Lookup Calendario">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dCalendario]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fluxo tabela fato\fVendas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

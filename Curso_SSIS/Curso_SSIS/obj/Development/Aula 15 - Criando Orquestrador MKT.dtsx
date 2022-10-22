@@ -1,63 +1,47 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="10/18/2022 6:54:26 PM"
+  DTS:CreationDate="10/22/2022 3:05:48 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-UL4QIO3"
   DTS:CreatorName="DESKTOP-UL4QIO3\walla"
-  DTS:DTSID="{997E3238-F5C0-4DA4-A794-3CD4CB5BA849}"
+  DTS:DTSID="{50E9115C-2823-478F-B1C8-576AB2E23578}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="2070"
-  DTS:ObjectName="Aula 14 - Orquestração MKT"
+  DTS:ObjectName="Aula 15 - Criando Orquestrador MKT"
   DTS:PackageType="5"
   DTS:VersionBuild="1"
-  DTS:VersionGUID="{8E6765D4-8EA8-4EDA-A4FD-F005EC3D614A}">
+  DTS:VersionGUID="{4EBA1D99-647D-48A4-AA7F-70A7CE3B88B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\dCalendario"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Tarefa Executar SQL"
-      DTS:DTSID="{9AEC29CC-5044-4695-8AEE-FA0A4C64E7C4}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="dCalendario"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{0298C804-ED36-40FD-A692-4E4934366A4E}"
-          SQLTask:SqlStatementSource="WITH DATAS (datamin,datamax) AS (&#xA;&#xA;&#x9;SELECT MIN(datamin), MAX(datamax) FROM (&#xA;&#x9;&#x9;SELECT MIN([paid_date]) AS datamin, MAX([paid_date]) AS datamax &#xA;&#x9;&#x9;FROM [STG_ESCOLA].dbo.Data_venda&#xA;&#xA;&#x9;) RS&#xA;&#xA;)&#xA;,CALENDARIO AS ( &#xA;&#xA;    SELECT (SELECT datamin FROM DATAS) AS [Data], 1 AS [nivel] --Ponto Inicial&#xA;        &#xA;&#x9;&#x9;UNION ALL&#xA;    &#xA;&#x9;SELECT DATEADD(DAY, 1, [Data]), [nivel] + 1 --Ponto Recursive&#xA;    FROM  CALENDARIO&#xA;    WHERE [Data] &lt; (SELECT datamax FROM DATAS)  &#xA;&#xA;)&#xA;INSERT INTO DW_ESCOLA.DBO.dCalendario ([Data])&#xA;SELECT [Data] FROM CALENDARIO WHERE DATA NOT IN (SELECT DATA FROM DW_ESCOLA.DBO.dCalendario)&#xA;OPTION (MAXRECURSION 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\dCliente"
+      DTS:refId="Package\DIMENSAO CLIENTE"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{4C961C5B-2371-4143-9035-7CA4F19A34F3}"
+      DTS:DTSID="{E51FD813-66A3-42C7-A60E-8519A7616121}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="dCliente"
+      DTS:ObjectName="DIMENSAO CLIENTE"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Aula 12 - Criando Dim_Cliente no DW.dtsx</PackageName>
+          <PackageName>Aula 12 - Criando dCliente.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\dProduto"
+      DTS:refId="Package\DIMENSAO PRODUTO"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{12FDB078-C624-4166-9098-EF6BA6B9046D}"
+      DTS:DTSID="{D5D2296B-D603-4EA2-A828-C988EEB9B936}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="dProduto"
+      DTS:ObjectName="DIMENSAO PRODUTO"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -68,30 +52,47 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\fVendas"
+      DTS:refId="Package\DIMENSAO_CALENDARIO"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{7A082B75-73E8-4258-A3FE-D304B3623945}"
+      DTS:DTSID="{8B67B935-D46D-4308-93FC-45D9B2C16F71}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="fVendas"
+      DTS:ObjectName="DIMENSAO_CALENDARIO"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Aula 13 - Populando Tabela Fato.dtsx</PackageName>
+          <PackageName>Aula 13 - Criando Dimensao Calendario.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Migração_PRD_to_STG"
+      DTS:refId="Package\FATO_VENDAS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{1C07F4DB-6B78-4E6C-B0FD-B54D719E047C}"
+      DTS:DTSID="{598D2093-9BAA-4FCE-8AB0-7A3E9B1A54CC}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Migração_PRD_to_STG"
+      DTS:ObjectName="FATO_VENDAS"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Aula 14 - Criando Tabela Fato.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\MIGRACAO PRD --&gt; STG"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{7D5B98CD-790A-442E-A207-EC05171E7179}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="MIGRACAO PRD --&gt; STG"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -106,35 +107,35 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{5D297F62-53EB-4D3F-B0DC-430813B6F648}"
-      DTS:From="Package\Migração_PRD_to_STG"
+      DTS:DTSID="{0886ADB0-B2D7-4C88-95F0-9AC098F9B0C9}"
+      DTS:From="Package\MIGRACAO PRD --&gt; STG"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\dCalendario" />
+      DTS:To="Package\DIMENSAO PRODUTO" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{765AE202-88BD-49F9-947F-64ADB98458B5}"
-      DTS:From="Package\dCalendario"
+      DTS:DTSID="{8867B4E3-811D-4911-8FFB-D12A00F764F7}"
+      DTS:From="Package\DIMENSAO PRODUTO"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\dProduto" />
+      DTS:To="Package\DIMENSAO CLIENTE" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{63E90392-DE50-4FB6-9230-64E1CF5D7E0D}"
-      DTS:From="Package\dProduto"
+      DTS:DTSID="{FFB21CBA-AD4D-4286-8319-B019DB880AA8}"
+      DTS:From="Package\DIMENSAO CLIENTE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\dCliente" />
+      DTS:To="Package\DIMENSAO_CALENDARIO" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{05A187F0-FE3C-43BE-AA98-61BDF0570019}"
-      DTS:From="Package\dCliente"
+      DTS:DTSID="{0FD11CE8-9C53-4853-B74E-9825010A336E}"
+      DTS:From="Package\DIMENSAO_CALENDARIO"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
-      DTS:To="Package\fVendas" />
+      DTS:To="Package\FATO_VENDAS" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -147,25 +148,18 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph">
-        <AnnotationLayout
-          Text="Orquestração MKT&#xD;&#xA;&#xD;&#xA;1 - Dados da PRD para Staging&#xD;&#xA;2 - Atualização das dimensões&#xD;&#xA;3 - Atualização da Fato"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="192.8,104"
-          Id="855ed5bd-eae4-4317-8c3b-26c00d5c7a09"
-          TopLeft="39.9999984105428,40.7333336570528" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Migração_PRD_to_STG"
-          TopLeft="324.999987085661,41.6000003306071" />
+          Size="200,41.6"
+          Id="Package\MIGRACAO PRD --&gt; STG"
+          TopLeft="226.666657659743,15.6000001239776" />
         <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\dCalendario"
-          TopLeft="354.166652593349,113.533334235615" />
+          Size="188.8,41.6"
+          Id="Package\DIMENSAO PRODUTO"
+          TopLeft="232.499990761281,87.5333340289858" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="420.783319839505,83.2000003306071">
+          TopLeft="326.783324210512,57.2000001239776">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -186,23 +180,23 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="120.8,41.6"
-          Id="Package\dProduto"
-          TopLeft="357.499985794227,197.600001570384" />
+          Size="184.8,41.6"
+          Id="Package\DIMENSAO CLIENTE"
+          TopLeft="237.499990562598,158.60000126044" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="419.633319193788,155.133334235615">
+          TopLeft="328.399990661939,129.133334028986">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.4666673347684"
+              EndConnector="0,29.4666672314538"
               Start="0,0"
-              End="0,34.9666673347684">
+              End="0,21.9666672314538">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.9666673347684" />
+                    End="0,21.9666672314538" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -212,23 +206,23 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="116.8,41.6"
-          Id="Package\dCliente"
-          TopLeft="362.499985595545,270.400002148946" />
+          Size="207.2,41.6"
+          Id="Package\DIMENSAO_CALENDARIO"
+          TopLeft="234.16665736172,230.533335165448" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="419.399985694886,239.200001570384">
+          TopLeft="333.833323962159,200.20000126044">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31.2000005785625"
+              EndConnector="0,30.333333905008"
               Start="0,0"
-              End="0,23.7000005785625">
+              End="0,22.833333905008">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.7000005785625" />
+                    End="0,22.833333905008" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -238,23 +232,23 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="116.8,41.6"
-          Id="Package\fVendas"
-          TopLeft="363.333318895765,344.066669401063" />
+          Size="154.4,41.6"
+          Id="Package\FATO_VENDAS"
+          TopLeft="259.999989668529,314.600002500216" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="421.316652245655,312.000002148946">
+          TopLeft="337.483323515124,272.133335165448">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.0666672521168"
+              EndConnector="0,42.4666673347687"
               Start="0,0"
-              End="0,24.5666672521168">
+              End="0,34.9666673347687">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5666672521168" />
+                    End="0,34.9666673347687" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
