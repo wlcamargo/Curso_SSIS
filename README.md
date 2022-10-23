@@ -25,3 +25,11 @@ Aula 10 - Migração Produção para Staging
 Aula 11 - Criação da dProduto no DW (com SCD tipo 2) Histórico na dimensão
 
 Aula 12 - Criação da dCliente no DW (com SCD tipo 2) Histórico na dimensão
+
+Aula 13 - Criação da dimensão calendário
+
+Aula 14 - Criação da tabela fato
+
+Aula 15 - Criando orquestrador de MKT
+
+Aula 16 - Criar um pacote de loop
