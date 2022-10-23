@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="10/22/2022 7:14:42 PM"
+  DTS:CreationDate="10/22/2022 5:45:56 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-UL4QIO3"
   DTS:CreatorName="DESKTOP-UL4QIO3\walla"
-  DTS:DTSID="{DA800C0B-8B80-48AB-A921-1861D714EA72}"
+  DTS:DTSID="{77F7C2AB-D344-46B0-A79D-2DC66D267476}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="2070"
-  DTS:ObjectName="Package3"
+  DTS:ObjectName="Aula 16 - Container"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{13FB30AD-F78A-4A4E-87DF-80DF81B3B905}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{963D32F9-BEEC-4CA4-8F9B-8D7DBEAD89F1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{6518200F-A06C-4B39-9F66-6EA5FF72C3D5}"
+      DTS:DTSID="{7DE50233-55BB-4DA1-999A-6F77240BF5CC}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[User::I]</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">@[User::i]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -31,8 +31,7 @@
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="0">
+          DTS:CodePage="1252">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -41,7 +40,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MES"
-              DTS:DTSID="{DAB5BDA9-86C1-48AE-B280-C9A6B8807FA0}"
+              DTS:DTSID="{5AFB23D2-F219-4E6C-9333-EAA2A9233180}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +49,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="META"
-              DTS:DTSID="{3F56F72C-2989-43BF-80F6-BAF09E5F3A84}"
+              DTS:DTSID="{2D161F36-136C-4724-BC86-23C7FA40094D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -60,12 +59,22 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{41A3612B-B476-4690-AE85-7C8FA0BFEFFA}"
+      DTS:DTSID="{D8BFF610-4063-4158-9607-ED62A4625FDB}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
-      DTS:ObjectName="I">
+      DTS:ObjectName="i">
       <DTS:VariableValue
-        DTS:DataType="8">0</DTS:VariableValue>
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F7B98A25-FE4E-4C2A-9868-FD0042C06097}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="j">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -73,18 +82,18 @@
       DTS:refId="Package\Contêiner do Loop Foreach"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Contêiner do Loop Foreach"
-      DTS:DTSID="{3C1AE5A9-C4A3-41AE-9F5B-7A372EB73481}"
+      DTS:DTSID="{664C9159-9791-4184-B67E-301406269E17}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Contêiner do Loop Foreach">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{4CE82581-D13C-4AC5-B323-6BA5E102ED04}"
-        DTS:ObjectName="{4CE82581-D13C-4AC5-B323-6BA5E102ED04}">
+        DTS:DTSID="{CCBA6049-2B75-4BC3-B374-418B8F98E7EF}"
+        DTS:ObjectName="{CCBA6049-2B75-4BC3-B374-418B8F98E7EF}">
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\walla\source\repos\Curso_SSIS\Curso_SSIS\METAS" />
+              Folder="C:\Users\walla\OneDrive - Educacional\Ambiente de Trabalho\METAS" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -100,7 +109,7 @@
           DTS:refId="Package\Contêiner do Loop Foreach\Data Flow Task"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{75B6A3B7-28F4-4982-AED9-7987C2C9847D}"
+          DTS:DTSID="{E5DBA616-8718-4BE8-8D6E-6AB42C0FBDE5}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="Data Flow Task"
@@ -375,10 +384,10 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{90490B6C-14CD-451B-B1A0-81C279DC8CB8}"
-          DTS:ObjectName="{90490B6C-14CD-451B-B1A0-81C279DC8CB8}"
+          DTS:DTSID="{284B8CD7-38E9-4BC3-81EB-73B549C6077C}"
+          DTS:ObjectName="{284B8CD7-38E9-4BC3-81EB-73B549C6077C}"
           DTS:ValueIndex="0"
-          DTS:VariableName="User::I" />
+          DTS:VariableName="User::i" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
   </DTS:Executables>
@@ -397,14 +406,14 @@
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Contêiner do Loop Foreach\Data Flow Task"
-          TopLeft="56.233325154252,31.6666677067015" />
+          TopLeft="62.6666608386571,46.6666675207351" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="243.2,128"
-          Size="243.2,171.2"
+          PanelSize="257.6,156.8"
+          Size="257.6,200"
           Id="Package\Contêiner do Loop Foreach"
-          TopLeft="128.333328233825,52.8666670868132" />
+          TopLeft="124.999995032947,59.8000004752478" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -414,27 +423,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source"
-          TopLeft="108.333329028554,47.6666670454873" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination"
-          TopLeft="102.499995927016,169.866668016646" />
+          TopLeft="198.333325452275,214.93333504147" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source"
+          TopLeft="194.166658951177,54.6000004339218" />
         <EdgeLayout
           Id="Package\Contêiner do Loop Foreach\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="186.016662477785,89.2666670454873">
+          TopLeft="269.766658951177,96.2000004339218">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,80.6000009711584"
+              EndConnector="14.1666665010983,118.733334607548"
               Start="0,0"
-              End="0,73.1000009711584">
+              End="14.1666665010983,111.233334607548">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.1000009711584" />
+                    End="0,55.3666673037741" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,55.3666673037741"
+                    Point2="0,59.3666673037741"
+                    Point3="4,59.3666673037741" />
+                  <mssgle:LineSegment
+                    End="10.1666665010983,59.3666673037741" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.1666665010983,59.3666673037741"
+                    Point2="14.1666665010983,59.3666673037741"
+                    Point3="14.1666665010983,63.3666673037741" />
+                  <mssgle:LineSegment
+                    End="14.1666665010983,111.233334607548" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

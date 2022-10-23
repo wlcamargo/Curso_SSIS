@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Aula 15 - Criando Orquestrador MKT"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{4EBA1D99-647D-48A4-AA7F-70A7CE3B88B1}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{B756DFBF-CAD0-417F-A868-DD6CA255ACA1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -150,16 +150,28 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="200,41.6"
-          Id="Package\MIGRACAO PRD --&gt; STG"
-          TopLeft="226.666657659743,15.6000001239776" />
+          Size="184.8,41.6"
+          Id="Package\DIMENSAO CLIENTE"
+          TopLeft="249.166656765673,156.000001239777" />
         <NodeLayout
           Size="188.8,41.6"
           Id="Package\DIMENSAO PRODUTO"
-          TopLeft="232.499990761281,87.5333340289858" />
+          TopLeft="243.333323664136,87.5333340289858" />
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\DIMENSAO_CALENDARIO"
+          TopLeft="244.166656964356,233.133335186111" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\FATO_VENDAS"
+          TopLeft="270.833322571384,314.600002500216" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\MIGRACAO PRD --&gt; STG"
+          TopLeft="237.499990562598,15.6000001239776" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="326.783324210512,57.2000001239776">
+          TopLeft="337.616657113367,57.2000001239776">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -179,24 +191,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="184.8,41.6"
-          Id="Package\DIMENSAO CLIENTE"
-          TopLeft="237.499990562598,158.60000126044" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="328.399990661939,129.133334028986">
+          TopLeft="339.649990214905,129.133334028986">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29.4666672314538"
+              EndConnector="0,26.8666672107912"
               Start="0,0"
-              End="0,21.9666672314538">
+              End="0,19.3666672107912">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.9666672314538" />
+                    End="0,19.3666672107912" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -205,24 +213,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\DIMENSAO_CALENDARIO"
-          TopLeft="234.16665736172,230.533335165448" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="333.833323962159,200.20000126044">
+          TopLeft="344.666656865014,197.600001239777">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,30.333333905008"
+              EndConnector="0,35.5333339463339"
               Start="0,0"
-              End="0,22.833333905008">
+              End="0,28.0333339463339">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.833333905008" />
+                    End="0,28.0333339463339" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -231,24 +235,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\FATO_VENDAS"
-          TopLeft="259.999989668529,314.600002500216" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="337.483323515124,272.133335165448">
+          TopLeft="347.89998976787,274.733335186111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.4666673347687"
+              EndConnector="0,39.8666673141051"
               Start="0,0"
-              End="0,34.9666673347687">
+              End="0,32.3666673141051">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.9666673347687" />
+                    End="0,32.3666673141051" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

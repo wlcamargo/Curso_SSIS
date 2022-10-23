@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="10/22/2022 7:14:42 PM"
+  DTS:CreationDate="10/23/2022 11:02:07 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-UL4QIO3"
   DTS:CreatorName="DESKTOP-UL4QIO3\walla"
-  DTS:DTSID="{DA800C0B-8B80-48AB-A921-1861D714EA72}"
+  DTS:DTSID="{4C82C948-5290-4197-8E1D-274D83E1E0E0}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="2070"
-  DTS:ObjectName="Package3"
+  DTS:ObjectName="Aula 16 - Criando Loop indeterminado"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{13FB30AD-F78A-4A4E-87DF-80DF81B3B905}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{F33BE812-1952-4E45-A663-BE41CFA7BC52}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[Arquivos_Meta]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{6518200F-A06C-4B39-9F66-6EA5FF72C3D5}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:DTSID="{F864A38C-BA40-46E3-9F43-10B3190E2548}"
+      DTS:ObjectName="Arquivos_Meta">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[User::I]</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">@[User::i]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -41,7 +41,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MES"
-              DTS:DTSID="{DAB5BDA9-86C1-48AE-B280-C9A6B8807FA0}"
+              DTS:DTSID="{1CF17A4B-1DDA-4A7D-A727-660BC11B15EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="META"
-              DTS:DTSID="{3F56F72C-2989-43BF-80F6-BAF09E5F3A84}"
+              DTS:DTSID="{CC4E2CEB-28B6-4B65-96CA-46B34FB5A5D3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -60,10 +60,10 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{41A3612B-B476-4690-AE85-7C8FA0BFEFFA}"
+      DTS:DTSID="{68805D02-12A4-4F5C-A128-E6C13107C330}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
-      DTS:ObjectName="I">
+      DTS:ObjectName="i">
       <DTS:VariableValue
         DTS:DataType="8">0</DTS:VariableValue>
     </DTS:Variable>
@@ -73,14 +73,14 @@
       DTS:refId="Package\Contêiner do Loop Foreach"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Contêiner do Loop Foreach"
-      DTS:DTSID="{3C1AE5A9-C4A3-41AE-9F5B-7A372EB73481}"
+      DTS:DTSID="{CF0F0463-89EB-4566-8337-07B548CD6AB0}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Contêiner do Loop Foreach">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{4CE82581-D13C-4AC5-B323-6BA5E102ED04}"
-        DTS:ObjectName="{4CE82581-D13C-4AC5-B323-6BA5E102ED04}">
+        DTS:DTSID="{12319A43-3E7C-4475-84DD-52D097173644}"
+        DTS:ObjectName="{12319A43-3E7C-4475-84DD-52D097173644}">
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
@@ -97,13 +97,13 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Contêiner do Loop Foreach\Data Flow Task"
+          DTS:refId="Package\Contêiner do Loop Foreach\Fluxo Metas"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{75B6A3B7-28F4-4982-AED9-7987C2C9847D}"
+          DTS:DTSID="{6C6F0B15-FAC7-4D73-A3C0-1F0F66C86000}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Data Flow Task"
+          DTS:ObjectName="Fluxo Metas"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -111,12 +111,12 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source"
+                  refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
                   localeId="2070"
-                  name="Flat File Source"
+                  name="Arquivos_Meta"
                   usesDispositions="true"
                   version="1">
                   <properties>
@@ -131,25 +131,25 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Arquivos_Meta]"
+                      connectionManagerRefId="Package.ConnectionManagers[Arquivos_Meta]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output]"
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[MES]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].Columns[MES]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MES]"
+                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].ExternalColumns[MES]"
                           length="50"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[MES]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].Columns[MES]"
                           name="MES"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -164,14 +164,14 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[META]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].Columns[META]"
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[META]"
+                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].ExternalColumns[META]"
                           length="50"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[META]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].Columns[META]"
                           name="META"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -189,13 +189,13 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MES]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].ExternalColumns[MES]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="MES" />
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[META]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].ExternalColumns[META]"
                           codePage="1252"
                           dataType="str"
                           length="50"
@@ -203,27 +203,27 @@
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Error Output]"
                       isErrorOut="true"
                       name="Flat File Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           codePage="1252"
                           dataType="text"
                           description="Flat File Source Error Output Column"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           name="Flat File Source Error Output Column" />
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -232,11 +232,11 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination"
+                  refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
-                  name="OLE DB Destination"
+                  name="fMetas"
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -289,7 +289,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Connections[OleDbConnection]"
                       connectionManagerID="{0298C804-ED36-40FD-A692-4E4934366A4E}:external"
                       connectionManagerRefId="Project.ConnectionManagers[LOCALHOST.DW_ESCOLA]"
                       description="The OLE DB runtime connection used to access the database."
@@ -297,62 +297,66 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MES]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="MES"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[data_meta]"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[MES]" />
-                        <inputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[META]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input].Columns[META]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="META"
-                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[valor]"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[META]" />
+                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input].ExternalColumns[META]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].Columns[META]" />
+                        <inputColumn
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input].Columns[MES]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="MES"
+                          externalMetadataColumnId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input].ExternalColumns[DATA_MES]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output].Columns[MES]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[data_meta]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input].ExternalColumns[ID_META]"
+                          dataType="i4"
+                          name="ID_META" />
+                        <externalMetadataColumn
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input].ExternalColumns[DATA_MES]"
+                          dataType="dbDate"
+                          name="DATA_MES" />
+                        <externalMetadataColumn
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input].ExternalColumns[META]"
                           codePage="1252"
                           dataType="str"
-                          length="100"
-                          name="data_meta" />
-                        <externalMetadataColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[valor]"
-                          dataType="cy"
-                          name="valor" />
+                          length="50"
+                          name="META" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -363,10 +367,10 @@
               </components>
               <paths>
                 <path
-                  refId="Package\Contêiner do Loop Foreach\Data Flow Task.Paths[Flat File Source Output]"
-                  endId="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Contêiner do Loop Foreach\Fluxo Metas.Paths[Flat File Source Output]"
+                  endId="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas.Inputs[OLE DB Destination Input]"
                   name="Flat File Source Output"
-                  startId="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+                  startId="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta.Outputs[Flat File Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -375,10 +379,10 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{90490B6C-14CD-451B-B1A0-81C279DC8CB8}"
-          DTS:ObjectName="{90490B6C-14CD-451B-B1A0-81C279DC8CB8}"
+          DTS:DTSID="{E9FBF7E3-E0E4-4F6B-8D63-D05DE33E17E9}"
+          DTS:ObjectName="{E9FBF7E3-E0E4-4F6B-8D63-D05DE33E17E9}"
           DTS:ValueIndex="0"
-          DTS:VariableName="User::I" />
+          DTS:VariableName="User::i" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
   </DTS:Executables>
@@ -395,46 +399,46 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Contêiner do Loop Foreach\Data Flow Task"
-          TopLeft="56.233325154252,31.6666677067015" />
+          Size="135.2,41.6"
+          Id="Package\Contêiner do Loop Foreach\Fluxo Metas"
+          TopLeft="89.3999890724822,37.6666678306792" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="243.2,128"
-          Size="243.2,171.2"
+          PanelSize="309.6,140"
+          Size="309.6,183.2"
           Id="Package\Contêiner do Loop Foreach"
-          TopLeft="128.333328233825,52.8666670868132" />
+          TopLeft="131.666661434704,57.2000004545849" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Contêiner do Loop Foreach\Data Flow Task">
+    design-time-name="Package\Contêiner do Loop Foreach\Fluxo Metas">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\Contêiner do Loop Foreach\Data Flow Task\Flat File Source"
-          TopLeft="108.333329028554,47.6666670454873" />
+          Size="109.6,41.6"
+          Id="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas"
+          TopLeft="256.66665646765,191.533334855504" />
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination"
-          TopLeft="102.499995927016,169.866668016646" />
+          Size="148,41.6"
+          Id="Package\Contêiner do Loop Foreach\Fluxo Metas\Arquivos_Meta"
+          TopLeft="236.666657262379,36.4000002892812" />
         <EdgeLayout
-          Id="Package\Contêiner do Loop Foreach\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="186.016662477785,89.2666670454873">
+          Id="Package\Contêiner do Loop Foreach\Fluxo Metas.Paths[Flat File Source Output]"
+          TopLeft="311.066656865014,78.0000002892812">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,80.6000009711584"
+              EndConnector="0,113.533334566222"
               Start="0,0"
-              End="0,73.1000009711584">
+              End="0,106.033334566222">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.1000009711584" />
+                    End="0,106.033334566222" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -447,7 +451,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Contêiner do Loop Foreach\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Contêiner do Loop Foreach\Fluxo Metas\fMetas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

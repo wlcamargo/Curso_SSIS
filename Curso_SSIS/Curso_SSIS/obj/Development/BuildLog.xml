@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Curso_SSIS</Name>
-    <LastWriteTime>2022-10-22T18:11:15.9545392Z</LastWriteTime>
+    <LastWriteTime>2022-10-23T14:26:54.7926619Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -78,7 +78,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 15 - Criando Orquestrador MKT.dtsx</Name>
-      <LastWriteTime>2022-10-22T18:11:15.9276091Z</LastWriteTime>
+      <LastWriteTime>2022-10-22T21:07:26.1315077Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Aula 16 - Criando Loop indeterminado.dtsx</Name>
+      <LastWriteTime>2022-10-23T14:26:54.7607507Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Aula 17 - Movimentando Arquivos.dtsx</Name>
+      <LastWriteTime>2022-10-23T14:26:54.7497771Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

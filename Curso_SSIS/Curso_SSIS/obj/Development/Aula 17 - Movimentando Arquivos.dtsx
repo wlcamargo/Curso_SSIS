@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/23/2022 11:02:07 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-UL4QIO3"
+  DTS:CreatorName="DESKTOP-UL4QIO3\walla"
+  DTS:DTSID="{525E5B81-F280-4B2A-AE89-6C69185F0106}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="2070"
+  DTS:ObjectName="Aula 17 - Movimentando Arquivos"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{C9D921C5-237D-4DD2-BA41-45847C51B268}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Arquivos_Meta]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{49F6E1D3-7658-4A63-B8DA-28522F88A7E8}"
+      DTS:ObjectName="Arquivos_Meta">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::i]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2070"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="0">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MES"
+              DTS:DTSID="{3C754876-76C2-4B4D-B232-7047B6D5826F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="META"
+              DTS:DTSID="{2AF2B40D-CBF5-4129-927D-C3F08F35500B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[METAS PROCESSADAS]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{7EC13730-87AC-47E1-BDED-9905883B2ACA}"
+      DTS:ObjectName="METAS PROCESSADAS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\walla\source\repos\Curso_SSIS\Curso_SSIS\METAS PROCESSADAS" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{43CE98F3-3FBA-48E0-8A7D-5D6A30BE33B7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="i">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Contêiner do Loop Foreach"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Contêiner do Loop Foreach"
+      DTS:DTSID="{C0BB5D24-0D0A-4205-9615-FBF6A2EECB2F}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Contêiner do Loop Foreach">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{23F9E46B-CB3C-4F3B-9D02-C9A5C0A8B3DC}"
+        DTS:ObjectName="{23F9E46B-CB3C-4F3B-9D02-C9A5C0A8B3DC}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\walla\source\repos\Curso_SSIS\Curso_SSIS\METAS" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Contêiner do Loop Foreach\Tarefa Sistema de Arquivos"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Tarefa Sistema de Arquivos"
+          DTS:DTSID="{08162833-582A-4656-BDE8-A8209237F61C}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarefa Sistema de Arquivos"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="{49F6E1D3-7658-4A63-B8DA-28522F88A7E8}"
+              TaskDestinationPath="{7EC13730-87AC-47E1-BDED-9905883B2ACA}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F24D73CC-54FE-489D-A4BB-3B6CD005BB3F}"
+          DTS:ObjectName="{F24D73CC-54FE-489D-A4BB-3B6CD005BB3F}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::i" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\Contêiner do Loop Foreach\Tarefa Sistema de Arquivos"
+          TopLeft="58.9666565669913,47.7333352894254" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="322.4,146.4"
+          Size="322.4,189.6"
+          Id="Package\Contêiner do Loop Foreach"
+          TopLeft="162.49999354283,102.266667479409" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
