@@ -1,6 +1,57 @@
-# Curso_SSIS
+# Documentação do Projeto - Curso SSIS
 
--------------------------------------------------------------------
+Desenvolvedor: Wallace Camargo
+
+Cliente: Curso de Integration Services para a Escola da Análise de Dados
+
+Data do Deploy: Novembro de 2022
+
+# Objetivos
+Simular a construção de um banco transacional e construção de fluxo para o Data Warehouse, passando pela camada de Staging.
+O projeto em questão é para a área do Marketing da empresa.
+
+Fonte de dados: Planilha de Excel e Banco de Dados
+
+Arquitetura do Projeto --> Pasta Imagens
+
+Schema do Projeto --> Pasta Imagens
+
+# Etapas do Projeto
+- Importar dados da planilha de Excel para simular o banco de produção
+- Criar banco de dados de staging e realizar a migração 
+- Criar consultas desnormalizando (juntando) as tabelas que serão dimensões e fato
+- Construção de chaves substitutas (SK)
+- Testar Versionamento dos atributos históricos nas dimensões
+- Criar orquestrador para sequenciar tarefas
+- Deploy do projeto no SQL Server
+- Agendamento do processo no SQL Server Agent
+- Configuração de feedback por e-mail do job realizado
+- Criar loop para importar todos os arquivos de meta para o banco de dados
+- Movimentar arquivos de meta para pasta “metas processadas”
+
+# Especificações 
+
+Modelo do projeto: Star Schema (modelo estrela)
+
+Dimensões: dCalendario, dCliente e dProduto
+
+Fatos: fMetas e fVendas
+
+# Dados históricos das dimensões
+
+dProduto: Preço
+
+dCliente: Salário, Score e Tipo Profissional
+
+# Restrições do Projeto
+
+fMetas não está relacionada com a dCalendario
+
+dProdutos no plural, fora do padrão dos nomes das dimensões
+
+
+------------------------------------------------------------------------------------------------
+Observação sobre as aulas: foram mais de 50 aulas, mas mantivemos aqui apenas os tópicos principais.
 
 Aula 1 - Introdução ao Git e Github
 
