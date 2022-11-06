@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Aula 17 - Movimentando Arquivos"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{C9D921C5-237D-4DD2-BA41-45847C51B268}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{B2CB71F5-F3DE-4D50-8EF9-D3E1A1DE544E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -108,13 +108,13 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Contêiner do Loop Foreach\Tarefa Sistema de Arquivos"
+          DTS:refId="Package\Contêiner do Loop Foreach\Transferir Metas Processadas"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="Tarefa Sistema de Arquivos"
           DTS:DTSID="{08162833-582A-4656-BDE8-A8209237F61C}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Tarefa Sistema de Arquivos"
+          DTS:ObjectName="Transferir Metas Processadas"
           DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -148,16 +148,16 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="206.4,41.6"
-          Id="Package\Contêiner do Loop Foreach\Tarefa Sistema de Arquivos"
-          TopLeft="58.9666565669913,47.7333352894254" />
+          Size="216.8,41.6"
+          Id="Package\Contêiner do Loop Foreach\Transferir Metas Processadas"
+          TopLeft="56.4666566663325,33.8666685125563" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="322.4,146.4"
           Size="322.4,189.6"
           Id="Package\Contêiner do Loop Foreach"
-          TopLeft="162.49999354283,102.266667479409" />
+          TopLeft="103.333329227236,81.4666673141055" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

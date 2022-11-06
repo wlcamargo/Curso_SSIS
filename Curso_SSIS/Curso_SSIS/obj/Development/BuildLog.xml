@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Curso_SSIS</Name>
-    <LastWriteTime>2022-10-23T14:26:54.7926619Z</LastWriteTime>
+    <LastWriteTime>2022-10-23T15:47:07.4228428Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -88,7 +88,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Aula 17 - Movimentando Arquivos.dtsx</Name>
-      <LastWriteTime>2022-10-23T14:26:54.7497771Z</LastWriteTime>
+      <LastWriteTime>2022-10-23T14:31:17.2810849Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>PRD_RH.dtsx</Name>
+      <LastWriteTime>2022-10-23T17:03:27.6103025Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
